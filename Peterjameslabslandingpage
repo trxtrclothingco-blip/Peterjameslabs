@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peter James Labs - Website Packages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & basic styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* Container */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header { background-color: #fff; padding: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    header h1 { font-size: 2rem; color: #111; }
+    header p { font-size: 1rem; color: #666; margin-top: 5px; }
+
+    /* Hero Section */
+    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px 20px; background-color: #f0f0f0; }
+    .hero h2 { font-size: 2.2rem; margin-bottom: 15px; color: #111; }
+    .hero p { font-size: 1.1rem; color: #555; max-width: 700px; }
+
+    /* Packages Section */
+    .packages { display: flex; flex-wrap: wrap; justify-content: center; margin: 60px 0; gap: 30px; }
+    .package { background-color: #fff; padding: 30px 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); flex: 1 1 300px; max-width: 350px; transition: transform 0.3s ease; }
+    .package:hover { transform: translateY(-5px); }
+    .package h3 { font-size: 1.5rem; margin-bottom: 15px; color: #111; }
+    .package p { font-size: 1rem; color: #555; margin-bottom: 20px; }
+    .package .price { font-size: 2rem; font-weight: 700; margin-bottom: 20px; color: #222; }
+    .package ul { list-style: none; margin-bottom: 20px; }
+    .package ul li { margin-bottom: 10px; }
+
+    .btn { display: inline-block; padding: 12px 25px; background-color: #111; color: #fff; border-radius: 5px; font-weight: 600; transition: background-color 0.3s ease; }
+    .btn:hover { background-color: #555; }
+
+    /* Contact Section */
+    .contact { background-color: #fff; padding: 60px 20px; text-align: center; border-top: 1px solid #e0e0e0; }
+    .contact h2 { font-size: 2rem; margin-bottom: 20px; }
+    .contact p { font-size: 1.2rem; color: #555; }
+    .contact a { color: #111; font-weight: 600; }
+
+    /* Footer */
+    footer { background-color: #f0f0f0; padding: 20px; text-align: center; font-size: 0.9rem; color: #666; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero { padding: 60px 20px; }
+      .packages { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="container">
+    <h1>Peter James Labs</h1>
+    <p>Professional websites for small businesses, fast and affordable.</p>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Build your business online today</h2>
+    <p>We provide professional, sleek websites starting from just £100 per month. Choose a package that fits your needs and grow your business online.</p>
+  </section>
+
+  <!-- Packages Section -->
+  <section class="container packages">
+    <!-- Basic Package -->
+    <div class="package">
+      <h3>Basic Website</h3>
+      <p>Perfect for small businesses looking for a simple online presence.</p>
+      <div class="price">£100 / month</div>
+      <ul>
+        <li>Responsive website (mobile & desktop)</li>
+        <li>Up to 5 pages</li>
+        <li>Contact form</li>
+        <li>Basic SEO</li>
+      </ul>
+      <a href="tel:07521482302" class="btn">Call to Order</a>
+    </div>
+
+    <!-- Premium Package -->
+    <div class="package">
+      <h3>Premium Website + Advertising</h3>
+      <p>Everything in Basic, plus premium features and online advertising support.</p>
+      <div class="price">£200 / month</div>
+      <ul>
+        <li>Everything in Basic</li>
+        <li>Up to 10 pages</li>
+        <li>Advanced SEO</li>
+        <li>Social media & Google Ads setup</li>
+        <li>Analytics & monthly reporting</li>
+      </ul>
+      <a href="tel:07521482302" class="btn">Call to Order</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Get in Touch</h2>
+    <p>Call us today at <a href="tel:07521482302">07521 482 302</a> to start your website or ask any questions.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Peter James Labs. All rights reserved.
+  </footer>
+
+</body>
+</html>
