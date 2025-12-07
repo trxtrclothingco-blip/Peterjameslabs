@@ -14,6 +14,11 @@
   <div class="logo">
     <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
   </div>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li class="dropdown-parent">
@@ -32,11 +37,7 @@
 
 <section class="section about-us">
   <h2>About Us</h2>
-  <p>Peter James Labs provides high-quality, <strong>affordable websites</strong> for small businesses and startups. 
-  Our mission is to eliminate the traditional large upfront costs associated with professional websites.  
-  We deliver fast, mobile-optimized, SEO-friendly, and fully managed websites, along with optional 
-  advertising campaigns for premium clients. We focus on making your business look professional online 
-  while letting you concentrate on growth.</p>
+  <p>Peter James Labs provides high-quality, <strong>affordable websites</strong> for small businesses and startups. Our mission is to eliminate the traditional large upfront costs associated with professional websites. We deliver fast, mobile-optimized, SEO-friendly, and fully managed websites, along with optional advertising campaigns for premium clients. We focus on making your business look professional online while letting you concentrate on growth.</p>
 </section>
 
 <footer class="footer">
@@ -46,6 +47,13 @@
 </div>
 
 <script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 const dropdownParents = document.querySelectorAll('.dropdown-parent');
 dropdownParents.forEach(parent => {
   parent.addEventListener('click', function(e) {
@@ -53,9 +61,17 @@ dropdownParents.forEach(parent => {
     this.classList.toggle('open');
   });
 });
+
 document.addEventListener('click', function(e) {
   dropdownParents.forEach(parent => {
     if (!parent.contains(e.target)) parent.classList.remove('open');
+  });
+});
+
+const allLinks = document.querySelectorAll('.nav-links a');
+allLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
   });
 });
 </script>
