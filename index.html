@@ -67,16 +67,14 @@
     left:0;
   }
 
-  /* Stock Images Section */
-  .images-section {
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+  /* Single Image Section */
+  .image-section {
+    text-align:center;
     padding:40px 20px;
   }
-  .images-section img {
-    width:300px;
+  .image-section img {
+    width:80%;
+    max-width:600px;
     border-radius:10px;
     box-shadow:0 6px 15px rgba(0,0,0,0.1);
   }
@@ -105,10 +103,10 @@
 
   /* Responsive */
   @media(max-width:768px){
-    .pricing-section, .images-section { flex-direction:column; align-items:center; }
+    .pricing-section, .image-section { flex-direction:column; align-items:center; }
     header h1 { font-size:36px; }
     header p { font-size:18px; }
-    .plan, .images-section img { width:90%; }
+    .plan, .image-section img { width:90%; }
   }
 </style>
 </head>
@@ -149,11 +147,9 @@
   </div>
 </section>
 
-<!-- Stock Images Section -->
-<section class="images-section">
-  <img src="https://images.unsplash.com/photo-1612831455545-1b6e7c1f4b2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2Vic2l0ZXxlbnwwfHwwfHw%3D&ixlib=rb-4.0.3&q=80&w=400" alt="Website stock image 1">
-  <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2Vic2l0ZXxlbnwwfHwwfHw%3D&ixlib=rb-4.0.3&q=80&w=400" alt="Website stock image 2">
-  <img src="https://images.unsplash.com/photo-1581091012184-3e5c4ef3b9f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2Vic2l0ZXxlbnwwfHwwfHw%3D&ixlib=rb-4.0.3&q=80&w=400" alt="Website stock image 3">
+<!-- Single Image Section -->
+<section class="image-section">
+  <img src="https://images.unsplash.com/photo-1581090700227-79d985af8f25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Network Visualization">
 </section>
 
 <!-- CTA Section -->
