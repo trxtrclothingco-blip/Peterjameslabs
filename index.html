@@ -3,116 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peter James Labs – Professional Websites</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-<style>
-  /* Global */
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'Montserrat', sans-serif; background:#f7f7f7; color:#333; line-height:1.6; }
-  a { text-decoration:none; color:inherit; }
-
-  /* Header / Hero */
-  header { 
-    background:#ffffff; 
-    text-align:center; 
-    padding:80px 20px; 
-  }
-  header h1 { font-size:48px; font-weight:700; margin-bottom:15px; }
-  header p { font-size:20px; color:#555; margin-bottom:30px; }
-
-  /* Light Blue Buttons */
-  .hero-btn, .cta a {
-    display:inline-block;
-    background-color: #4da6ff; /* Light blue */
-    color:white;
-    padding:18px 40px;
-    font-size:20px;
-    font-weight:700;
-    border-radius:8px;
-    transition: all 0.3s ease;
-  }
-  .hero-btn:hover, .cta a:hover { background-color: #3399ff; transform: translateY(-2px); }
-
-  /* About Us Section */
-  .about-us {
-    background:#f0f0f0;
-    padding:60px 20px;
-    text-align:center;
-  }
-  .about-us h2 { font-size:36px; margin-bottom:20px; color:#4da6ff; }
-  .about-us p {
-    max-width:800px;
-    margin:0 auto;
-    font-size:18px;
-    color:#555;
-  }
-
-  /* Pricing Section */
-  .pricing-section {
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    padding:60px 20px;
-    flex-wrap:wrap;
-  }
-  .plan {
-    background:white;
-    border-radius:15px;
-    padding:30px 25px;
-    width:320px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-  }
-  .plan h3 { font-size:28px; font-weight:700; margin-bottom:15px; }
-  .price { font-size:36px; font-weight:700; color:#4da6ff; margin-bottom:15px; }
-  .plan ul { list-style:none; padding-left:0; color:#555; text-align:left; }
-  .plan li { margin:10px 0; position:relative; padding-left:25px; }
-  .plan li::before { content:"✔"; color:#4da6ff; position:absolute; left:0; }
-
-  /* CTA Section */
-  .cta { text-align:center; padding:50px 20px; }
-  .cta a {
-    display:inline-block;
-    background:#4da6ff;
-    color:white;
-    padding:18px 40px;
-    font-size:20px;
-    font-weight:700;
-    border-radius:8px;
-  }
-  .cta a:hover { background:#3399ff; }
-
-  /* Footer */
-  footer {
-    text-align:center;
-    background:#f0f0f0;
-    padding:30px 20px;
-    font-size:16px;
-    border-top:1px solid #ddd;
-  }
-
-  /* Responsive */
-  @media(max-width:768px){
-    header h1 { font-size:36px; }
-    header p { font-size:18px; }
-    .plan { width:90%; }
-  }
-</style>
+<title>Peter James Labs – Home</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Header / Hero -->
-<header id="home">
+<nav>
+  <div class="logo">Peter James Labs</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<header>
   <h1>Peter James Labs</h1>
   <p>Professional Websites for Small Businesses</p>
-  <a href="tel:07521482302" class="hero-btn">Call 07521 482302</a>
+  <a href="contact.html" class="hero-btn">Call 07521 482302</a>
 </header>
 
-<!-- About Us Section -->
-<section class="about-us" id="about">
+<section class="section about-us">
   <h2>About Us</h2>
   <p>At Peter James Labs, we provide <strong>affordable, professional websites</strong> for small businesses. 
   Our services eliminate the large upfront costs usually associated with web development, delivering fully 
@@ -121,40 +35,6 @@
   simple, cost-effective, and professional—so you can focus on what you do best.</p>
 </section>
 
-<!-- Pricing Section -->
-<section class="pricing-section">
-  <div class="plan">
-    <h3>Basic Website</h3>
-    <div class="price">£100 / month</div>
-    <ul>
-      <li>Professional business website</li>
-      <li>Fast 15–30 minute setup</li>
-      <li>Mobile optimized</li>
-      <li>SEO optimized</li>
-      <li>Fully managed & updated</li>
-      <li>No hidden fees</li>
-    </ul>
-  </div>
-
-  <div class="plan">
-    <h3>Premium + Advertising</h3>
-    <div class="price">£200 / month</div>
-    <ul>
-      <li>Everything in Basic plan</li>
-      <li>Full advertising setup</li>
-      <li>Google Maps optimization</li>
-      <li>Social media setup</li>
-      <li>Lead generation funnels</li>
-    </ul>
-  </div>
-</section>
-
-<!-- CTA Section -->
-<div class="cta">
-  <a href="tel:07521482302">Call Now – 07521 482302</a>
-</div>
-
-<!-- Footer -->
 <footer>
   Peter James Labs © 2025 — All Rights Reserved
 </footer>
