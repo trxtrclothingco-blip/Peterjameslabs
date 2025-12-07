@@ -14,6 +14,11 @@
   <div class="logo">
     <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
   </div>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li class="dropdown-parent">
@@ -33,8 +38,9 @@
 <section class="section testimonials">
   <h2>Testimonials</h2>
   <p style="text-align:center; color:#c0c0c0; margin-bottom:40px;">
-    Example feedback from our clients:
+    Example client feedback to illustrate typical responses.
   </p>
+
   <div class="testimonials-grid">
     <div class="testimonial">
       <p>"Professional service and very fast setup. Highly recommend."</p>
@@ -48,6 +54,10 @@
       <p>"Great design and mobile-friendly layout."</p>
       <div class="author">— Ahmed Khan, Landscaping</div>
     </div>
+    <div class="testimonial">
+      <p>"SEO setup helped my business get more customers."</p>
+      <div class="author">— Emily Brown, Cafe Owner</div>
+    </div>
   </div>
 </section>
 
@@ -58,6 +68,13 @@
 </div>
 
 <script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 const dropdownParents = document.querySelectorAll('.dropdown-parent');
 dropdownParents.forEach(parent => {
   parent.addEventListener('click', function(e) {
@@ -65,9 +82,17 @@ dropdownParents.forEach(parent => {
     this.classList.toggle('open');
   });
 });
+
 document.addEventListener('click', function(e) {
   dropdownParents.forEach(parent => {
     if (!parent.contains(e.target)) parent.classList.remove('open');
+  });
+});
+
+const allLinks = document.querySelectorAll('.nav-links a');
+allLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
   });
 });
 </script>
