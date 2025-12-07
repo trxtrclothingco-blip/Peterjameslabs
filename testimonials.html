@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Peter James Labs – Testimonials</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peter James Labs – Testimonials</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -12,65 +12,56 @@
   <div class="logo">
     <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
   </div>
-
   <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
     <li class="dropdown-parent">
-      <a href="#">Pages &#9662;</a>
+      <a href="#">Pages ▼</a>
       <ul class="dropdown">
-        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
       </ul>
     </li>
   </ul>
 </nav>
-  
-<header class="header-glass" style="text-align:center;">
-  <h1>Testimonials</h1>
-  <p>What our clients say about our services</p>
-</header>
 
 <section class="section testimonials">
   <h2>Testimonials</h2>
-  <p style="text-align:center; color:#c0c0c0; margin-bottom:40px;">
-    The following are <strong>example testimonials</strong> that represent the type of feedback our clients typically provide. They are for illustrative purposes only.
-  </p>
-
   <div class="testimonials-grid">
     <div class="testimonial">
       <p>"Professional service and very fast setup. Highly recommend."</p>
-      <div class="author">— Example: Steve Barrett, Plumbing</div>
+      <div class="author">— Steve Barrett, Plumbing</div>
     </div>
     <div class="testimonial">
       <p>"Affordable website with all the features I needed."</p>
-      <div class="author">— Example: Sarah Lee, Electrical</div>
+      <div class="author">— Sarah Lee, Electrical</div>
     </div>
     <div class="testimonial">
       <p>"Great design and mobile-friendly layout."</p>
-      <div class="author">— Example: Ahmed Khan, Landscaping</div>
+      <div class="author">— Ahmed Khan, Landscaping</div>
     </div>
     <div class="testimonial">
       <p>"SEO setup helped my business get more customers."</p>
-      <div class="author">— Example: Emily Brown, Cafe Owner</div>
+      <div class="author">— Emily Brown, Cafe Owner</div>
     </div>
     <div class="testimonial">
       <p>"Easy to manage and looks very professional."</p>
-      <div class="author">— Example: James Wilson, Carpenter</div>
+      <div class="author">— James Wilson, Carpenter</div>
     </div>
     <div class="testimonial">
       <p>"Premium plan advertising setup was excellent."</p>
-      <div class="author">— Example: Rachel Green, Hair Salon</div>
+      <div class="author">— Rachel Green, Hair Salon</div>
     </div>
     <div class="testimonial">
       <p>"Fast, clear communication, and very satisfied."</p>
-      <div class="author">— Example: David Turner, Electrician</div>
+      <div class="author">— David Turner, Electrician</div>
     </div>
     <div class="testimonial">
       <p>"Professional and affordable website service for small businesses."</p>
-      <div class="author">— Example: Lisa Adams, Fitness Trainer</div>
+      <div class="author">— Lisa Adams, Fitness Trainer</div>
     </div>
   </div>
 </section>
@@ -79,5 +70,19 @@
   Peter James Labs © 2025 — All Rights Reserved
 </footer>
 
+<script>
+const dropdownParents = document.querySelectorAll('.dropdown-parent');
+dropdownParents.forEach(parent => {
+  parent.addEventListener('click', function(e) {
+    e.preventDefault();
+    this.classList.toggle('open');
+  });
+});
+document.addEventListener('click', function(e) {
+  dropdownParents.forEach(parent => {
+    if (!parent.contains(e.target)) parent.classList.remove('open');
+  });
+});
+</script>
 </body>
 </html>
