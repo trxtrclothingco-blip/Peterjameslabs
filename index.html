@@ -1,85 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peter James Labs – Home</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peter James Labs | Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="content-wrapper">
+  <!-- NAVIGATION -->
+  <nav class="sticky-nav">
+    <div class="logo">
+      <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
+    </div>
 
-<nav class="sticky-nav">
-  <div class="logo">
-    <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content-wrapper">
+
+    <header class="header-glass">
+      <h1>Professional Websites for Small Businesses</h1>
+      <p>Get your fully-managed website built in 15–30 minutes. No contracts. No hassle.</p>
+      <a class="hero-btn" href="contact.html">Get Started</a>
+      <p style="margin-top:25px; font-size:1.3em;">📞 07534 472099</p>
+    </header>
+
+    <section class="section">
+      <h2>Why Choose Us?</h2>
+      <p>We handle everything — you focus on your business.</p>
+    </section>
+
   </div>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li class="dropdown-parent">
-      <a href="#">Pages ▼</a>
-      <ul class="dropdown">
-        <li><a href="about.html">About</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
 
-<header class="header-glass">
-  <h1>Peter James Labs</h1>
-  <p>Professional Websites for Small Businesses</p>
-  <a href="contact.html" class="hero-btn">Call 07521 482302</a>
-</header>
+  <!-- JS -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 
-<section class="section about-us">
-  <h2>About Us</h2>
-  <p>At Peter James Labs, we provide <strong>affordable, professional websites</strong> for small businesses. Our services eliminate the large upfront costs usually associated with web development, delivering fully managed, SEO-optimized, and mobile-friendly websites that help your business grow online. We also provide advertising setup and lead generation strategies for premium clients. Our goal is to make website ownership simple, cost-effective, and professional—so you can focus on what you do best.</p>
-</section>
-
-<footer class="footer">
-  Peter James Labs © 2025 — All Rights Reserved
-</footer>
-
-</div>
-
-<script>
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-
-const dropdownParents = document.querySelectorAll('.dropdown-parent');
-dropdownParents.forEach(parent => {
-  parent.addEventListener('click', function(e) {
-    e.preventDefault();
-    this.classList.toggle('open');
-  });
-});
-
-document.addEventListener('click', function(e) {
-  dropdownParents.forEach(parent => {
-    if (!parent.contains(e.target)) parent.classList.remove('open');
-  });
-});
-
-const allLinks = document.querySelectorAll('.nav-links a');
-allLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-  });
-});
-</script>
 </body>
 </html>
