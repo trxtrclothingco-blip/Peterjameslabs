@@ -14,6 +14,11 @@
   <div class="logo">
     <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
   </div>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li class="dropdown-parent">
@@ -32,7 +37,7 @@
 
 <section class="section contact">
   <h2>Contact Us</h2>
-  <p>Call or email us today to get your professional website setup quickly and affordably.</p>
+  <p>Call us today to get your professional website setup quickly and affordably.</p>
   <a href="tel:07521482302" class="hero-btn">Call 07521 482302</a>
 </section>
 
@@ -43,6 +48,13 @@
 </div>
 
 <script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 const dropdownParents = document.querySelectorAll('.dropdown-parent');
 dropdownParents.forEach(parent => {
   parent.addEventListener('click', function(e) {
@@ -50,9 +62,17 @@ dropdownParents.forEach(parent => {
     this.classList.toggle('open');
   });
 });
+
 document.addEventListener('click', function(e) {
   dropdownParents.forEach(parent => {
     if (!parent.contains(e.target)) parent.classList.remove('open');
+  });
+});
+
+const allLinks = document.querySelectorAll('.nav-links a');
+allLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
   });
 });
 </script>
