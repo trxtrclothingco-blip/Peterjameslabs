@@ -1,265 +1,248 @@
-/* ============================= */
-/* GLOBAL RESET AND BASE STYLES  */
-/* ============================= */
+/* =======================
+   GENERAL STYLES
+======================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
-  background-color: #0f111b;
-  color: #eee;
+  background-color: #121a30;
+  color: #ddd;
   line-height: 1.6;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
-ul {
-  list-style: none;
+/* =======================
+   CONTENT WRAPPER
+======================= */
+.content-wrapper {
+  padding-top: 150px; /* space for sticky nav and logo */
 }
 
-/* ============================= */
-/* STICKY NAVIGATION             */
-/* ============================= */
+/* =======================
+   STICKY NAV
+======================= */
 .sticky-nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 15px 40px;
-  background-color: rgba(20, 25, 50, 0.85);
   backdrop-filter: blur(15px) saturate(180%);
   -webkit-backdrop-filter: blur(15px) saturate(180%);
+  background-color: rgba(20, 25, 50, 0.8);
+  padding: 15px 40px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   z-index: 1000;
+  border-radius: 0 0 16px 16px;
 }
 
+/* Logo */
+.sticky-nav .logo {
+  position: relative;
+}
 .sticky-nav .logo img {
-  max-width: 220px;
+  max-width: 250px;
   height: auto;
-  margin-right: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s;
+}
+.sticky-nav .logo img:hover {
+  transform: translateX(-50%) scale(1.05);
 }
 
-.sticky-nav ul.nav-links {
-  display: flex;
-  align-items: center;
+/* Nav Links */
+.sticky-nav .nav-links {
   margin-left: auto;
-}
-
-.sticky-nav ul.nav-links li {
+  display: flex;
+  list-style: none;
+  gap: 25px;
   position: relative;
 }
 
-.sticky-nav ul.nav-links li a {
-  display: block;
+.sticky-nav .nav-links li a {
   padding: 8px 14px;
-  margin-left: 10px;
   border-radius: 8px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
-.sticky-nav ul.nav-links li a:hover {
+.sticky-nav .nav-links li a:hover {
   background-color: rgba(255,255,255,0.2);
   color: #fff;
 }
 
-/* ============================= */
-/* DROPDOWN MENU                 */
-/* ============================= */
-.nav-links .dropdown {
-  display: none;
+/* Dropdown */
+.sticky-nav .dropdown {
   position: absolute;
   top: 45px;
-  right: 0;
-  background-color: rgba(20,25,50,0.95);
-  backdrop-filter: blur(15px);
-  border-radius: 10px;
-  min-width: 180px;
-  z-index: 1001;
+  left: 0;
+  background-color: rgba(20, 25, 50, 0.95);
+  border-radius: 8px;
+  display: none;
   flex-direction: column;
+  min-width: 150px;
   padding: 10px 0;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
+  z-index: 1001;
 }
 
-.nav-links li.open .dropdown {
+.sticky-nav .dropdown-parent.open .dropdown {
   display: flex;
-  opacity: 1;
-  transform: translateY(0);
 }
 
-.nav-links .dropdown li a {
-  padding: 10px 20px;
-  margin: 0;
-  width: 100%;
-  white-space: nowrap;
+.sticky-nav .dropdown li {
+  padding: 5px 20px;
 }
 
-.nav-links .dropdown li a:hover {
+.sticky-nav .dropdown li a:hover {
   background-color: rgba(255,255,255,0.2);
 }
 
-/* ============================= */
-/* HEADER / HERO SECTION         */
-/* ============================= */
+/* =======================
+   HEADER GLASS
+======================= */
 .header-glass {
-  margin-top: 120px; /* push down so nav doesn't cover */
   text-align: center;
-  padding: 80px 20px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 60px 20px;
   border-radius: 16px;
-  margin-left: 20px;
-  margin-right: 20px;
-  scroll-margin-top: 140px; /* fixes anchor links */
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  background-color: rgba(20, 25, 50, 0.6);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .header-glass h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .header-glass p {
-  font-size: 1.25rem;
-  margin-bottom: 25px;
-  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
 .hero-btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #2f80ed;
+  padding: 12px 25px;
+  background-color: #1e90ff;
   color: #fff;
+  font-weight: bold;
   border-radius: 8px;
-  font-weight: 600;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 .hero-btn:hover {
-  background-color: #1f60c4;
+  background-color: #63b3ff;
 }
 
-/* ============================= */
-/* SECTIONS                      */
-/* ============================= */
+/* =======================
+   SECTIONS
+======================= */
 .section {
-  padding: 80px 20px; /* extra top padding for nav */
-  margin: 20px auto;
-  max-width: 1200px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px 20px;
   border-radius: 16px;
-  scroll-margin-top: 140px; /* fixes anchor links */
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  background-color: rgba(20, 25, 50, 0.6);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .section h2 {
+  text-align: center;
+  margin-bottom: 20px;
   font-size: 2rem;
-  margin-bottom: 25px;
-  text-align: center;
 }
 
-.section p {
-  text-align: center;
-  color: #ccc;
-  font-size: 1.1rem;
-}
-
-/* ============================= */
-/* PRICING / PORTFOLIO / CARDS   */
-/* ============================= */
 .pricing-cards, .testimonials-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .plan, .testimonial {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
-  border-radius: 16px;
-  padding: 25px;
-  text-align: center;
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.plan:hover, .testimonial:hover {
-  transform: translateY(-5px);
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(30,35,60,0.6);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .price {
   font-size: 1.5rem;
-  font-weight: 700;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
-/* ============================= */
-/* FOOTER                        */
-/* ============================= */
+.testimonial .author {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* =======================
+   FOOTER
+======================= */
 .footer {
   text-align: center;
-  padding: 25px;
+  padding: 20px 0;
   margin-top: 40px;
-  color: #aaa;
-  font-size: 0.95rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: #bbb;
 }
 
-/* ============================= */
-/* MOBILE RESPONSIVE             */
-/* ============================= */
+/* =======================
+   MEDIA QUERIES
+======================= */
 @media screen and (max-width: 768px) {
   .sticky-nav {
     flex-direction: column;
+    align-items: center;
     padding: 15px 20px;
   }
-
   .sticky-nav .logo img {
-    margin: 0 0 10px 0;
-    max-width: 180px;
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+    max-width: 200px;
   }
-
-  .sticky-nav ul.nav-links {
+  .sticky-nav .nav-links {
     flex-direction: column;
+    width: 100%;
     gap: 10px;
-    width: 100%;
     margin: 0;
+    padding: 0;
   }
-
-  .sticky-nav ul.nav-links li a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links .dropdown {
+  .sticky-nav .dropdown {
     position: static;
     width: 100%;
-    top: 0;
+    padding: 0;
   }
-
-  .header-glass {
-    padding: 50px 10px;
-    margin: 100px 10px 20px 10px;
+  .content-wrapper {
+    padding-top: 180px;
   }
+}
 
+@media screen and (max-width: 480px) {
   .header-glass h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
-
   .header-glass p {
     font-size: 1rem;
   }
-
-  .section {
-    padding: 60px 10px;
+  .hero-btn {
+    padding: 10px 20px;
   }
 }
