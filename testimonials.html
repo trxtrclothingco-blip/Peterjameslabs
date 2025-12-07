@@ -1,100 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peter James Labs – Testimonials</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials | Peter James Labs</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="content-wrapper">
+  <nav class="sticky-nav">
+    <div class="logo"><img src="images/IMG_9677.jpeg"></div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<nav class="sticky-nav">
-  <div class="logo">
-    <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
+  <div class="content-wrapper">
+    <section class="section">
+      <h2>Testimonials</h2>
+
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <p>“Amazing service!”</p>
+          <p class="author">— Client</p>
+        </div>
+      </div>
+    </section>
   </div>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li class="dropdown-parent">
-      <a href="#">Pages ▼</a>
-      <ul class="dropdown">
-        <li><a href="about.html">About</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
 
-<section class="section testimonials">
-  <h2>Testimonials</h2>
-  <p style="text-align:center; color:#c0c0c0; margin-bottom:40px;">
-    Example client feedback to illustrate typical responses.
-  </p>
+  <script>
+    document.querySelector('.hamburger').addEventListener('click',()=>{
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
 
-  <div class="testimonials-grid">
-    <div class="testimonial">
-      <p>"Professional service and very fast setup. Highly recommend."</p>
-      <div class="author">— Steve Barrett, Plumbing</div>
-    </div>
-    <div class="testimonial">
-      <p>"Affordable website with all the features I needed."</p>
-      <div class="author">— Sarah Lee, Electrical</div>
-    </div>
-    <div class="testimonial">
-      <p>"Great design and mobile-friendly layout."</p>
-      <div class="author">— Ahmed Khan, Landscaping</div>
-    </div>
-    <div class="testimonial">
-      <p>"SEO setup helped my business get more customers."</p>
-      <div class="author">— Emily Brown, Cafe Owner</div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  Peter James Labs © 2025 — All Rights Reserved
-</footer>
-
-</div>
-
-<script>
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-
-const dropdownParents = document.querySelectorAll('.dropdown-parent');
-dropdownParents.forEach(parent => {
-  parent.addEventListener('click', function(e) {
-    e.preventDefault();
-    this.classList.toggle('open');
-  });
-});
-
-document.addEventListener('click', function(e) {
-  dropdownParents.forEach(parent => {
-    if (!parent.contains(e.target)) parent.classList.remove('open');
-  });
-});
-
-const allLinks = document.querySelectorAll('.nav-links a');
-allLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-  });
-});
-</script>
 </body>
 </html>
