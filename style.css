@@ -25,7 +25,7 @@ nav {
   backdrop-filter: blur(15px) saturate(180%);
   -webkit-backdrop-filter: blur(15px) saturate(180%);
   background-color: rgba(20, 25, 50, 0.7);
-  padding: 15px 40px;
+  padding: 15px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0 0 16px 16px;
   z-index: 1000;
@@ -48,16 +48,17 @@ nav ul {
   margin-left: auto;
   display: flex;
   list-style: none;
-  gap: 25px;
+  gap: 15px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #ddd;
-  padding: 8px 14px;
+  padding: 8px 12px;
   border-radius: 8px;
   font-weight: 500;
   transition: all 0.3s;
+  font-size: 0.95rem;
 }
 
 nav ul li a:hover {
@@ -69,9 +70,9 @@ nav ul li a:hover {
    HERO / HEADER
 ======================== */
 .header-glass {
-  margin: 40px auto;
-  padding: 60px 20px;
-  max-width: 1000px;
+  margin: 30px auto;
+  padding: 40px 20px;
+  max-width: 900px;
   text-align: center;
   backdrop-filter: blur(15px) saturate(180%);
   -webkit-backdrop-filter: blur(15px) saturate(180%);
@@ -82,18 +83,18 @@ nav ul li a:hover {
 }
 
 .header-glass h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  margin-bottom: 12px;
 }
 
 .header-glass p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
 .hero-btn {
   display: inline-block;
-  padding: 12px 30px;
+  padding: 10px 25px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 12px;
@@ -101,6 +102,7 @@ nav ul li a:hover {
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s;
+  font-size: 0.95rem;
 }
 
 .hero-btn:hover {
@@ -112,9 +114,9 @@ nav ul li a:hover {
    SECTIONS
 ======================== */
 .section {
-  margin: 50px auto;
-  max-width: 1000px;
-  padding: 30px 20px;
+  margin: 30px auto;
+  max-width: 900px;
+  padding: 25px 15px;
   backdrop-filter: blur(15px) saturate(180%);
   -webkit-backdrop-filter: blur(15px) saturate(180%);
   background-color: rgba(30, 35, 60, 0.6);
@@ -124,15 +126,26 @@ nav ul li a:hover {
 }
 
 .section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
   text-align: center;
 }
 
 .section p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   text-align: justify;
+}
+
+.section ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.section ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
 }
 
 /* ========================
@@ -141,15 +154,16 @@ nav ul li a:hover {
 .pricing-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
   justify-content: center;
 }
 
 .plan {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
-  padding: 20px;
-  width: 220px;
+  padding: 15px;
+  width: 100%;
+  max-width: 220px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s, background 0.3s;
@@ -161,8 +175,8 @@ nav ul li a:hover {
 }
 
 .plan .price {
-  font-size: 1.5rem;
-  margin: 15px 0;
+  font-size: 1.3rem;
+  margin: 10px 0;
 }
 
 /* ========================
@@ -170,21 +184,21 @@ nav ul li a:hover {
 ======================== */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
 }
 
 .testimonial {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .testimonial .author {
-  margin-top: 10px;
+  margin-top: 8px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #ccc;
 }
 
@@ -193,14 +207,14 @@ nav ul li a:hover {
 ======================== */
 footer.footer {
   text-align: center;
-  padding: 20px;
-  margin-top: 50px;
+  padding: 15px;
+  margin-top: 30px;
   backdrop-filter: blur(15px) saturate(180%);
   -webkit-backdrop-filter: blur(15px) saturate(180%);
   background-color: rgba(20, 25, 50, 0.7);
   border-radius: 16px 16px 0 0;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #ccc;
 }
 
@@ -208,16 +222,85 @@ footer.footer {
    RESPONSIVE GLOBAL
 ======================== */
 @media screen and (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 15px;
+  }
+
+  /* FIXED LOGO ON MOBILE */
+  nav .logo img {
+    position: static;   /* remove absolute */
+    transform: none;    /* remove translate */
+    margin-bottom: 10px;
+    max-width: 120px;   /* smaller logo */
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
   .header-glass {
-    padding: 40px 15px;
+    padding: 25px 15px;
+  }
+
+  .header-glass h1 {
+    font-size: 1.6rem;
+  }
+
+  .header-glass p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
   }
 
   .section {
-    padding: 20px 15px;
+    padding: 20px 10px;
   }
 
   .pricing-cards {
     flex-direction: column;
     align-items: center;
+  }
+
+  .plan {
+    max-width: 100%;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-glass h1 {
+    font-size: 1.4rem;
+  }
+
+  .header-glass p {
+    font-size: 0.85rem;
+  }
+
+  .hero-btn {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+  }
+
+  nav ul li a {
+    font-size: 0.85rem;
+    padding: 6px 8px;
   }
 }
