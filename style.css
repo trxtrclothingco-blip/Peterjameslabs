@@ -1,306 +1,119 @@
 /* ========================
-   GENERAL RESET
+   STICKY NAVIGATION
 ======================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: linear-gradient(135deg, #1b1f38, #151729);
-  color: #eee;
-  line-height: 1.6;
-}
-
-/* ========================
-   NAVIGATION
-======================== */
-nav {
+.sticky-nav {
+  position: fixed;    /* keeps navbar at top */
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  position: relative;
   backdrop-filter: blur(15px) saturate(180%);
   -webkit-backdrop-filter: blur(15px) saturate(180%);
-  background-color: rgba(20, 25, 50, 0.7);
+  background-color: rgba(20, 25, 50, 0.9);
   padding: 15px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0 0 16px 16px;
-  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 10000;
 }
 
-nav .logo img {
-  max-width: 200px;
+/* Logo in center */
+.sticky-nav .logo img {
+  max-width: 250px;
   height: auto;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  transition: transform 0.3s;
 }
 
-nav .logo img:hover {
-  transform: translateX(-50%) scale(1.05);
-}
-
-nav ul {
+/* Links container */
+.nav-links {
   margin-left: auto;
   display: flex;
   list-style: none;
-  gap: 15px;
 }
 
-nav ul li a {
+/* Dropdown parent */
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
   text-decoration: none;
   color: #ddd;
   padding: 8px 12px;
   border-radius: 8px;
   font-weight: 500;
-  transition: all 0.3s;
   font-size: 0.95rem;
+  transition: all 0.3s;
 }
 
-nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.nav-links li a:hover {
   color: #fff;
+  background-color: rgba(255,255,255,0.2);
 }
 
-/* ========================
-   HERO / HEADER
-======================== */
-.header-glass {
-  margin: 30px auto;
-  padding: 40px 20px;
-  max-width: 900px;
-  text-align: center;
-  backdrop-filter: blur(15px) saturate(180%);
-  -webkit-backdrop-filter: blur(15px) saturate(180%);
-  background-color: rgba(30, 35, 60, 0.7);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-}
-
-.header-glass h1 {
-  font-size: 2rem;
-  margin-bottom: 12px;
-}
-
-.header-glass p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.hero-btn {
-  display: inline-block;
-  padding: 10px 25px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+/* Dropdown menu hidden */
+.nav-links .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(20,25,50,0.95);
   border-radius: 12px;
+  padding: 10px 0;
+  min-width: 150px;
+  list-style: none;
+  z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.nav-links li:hover .dropdown {
+  display: block;
+}
+
+.nav-links .dropdown li a {
+  display: block;
+  padding: 8px 20px;
+  color: #ddd;
+}
+
+.nav-links .dropdown li a:hover {
   color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s;
-  font-size: 0.95rem;
+  background-color: rgba(255,255,255,0.2);
 }
 
-.hero-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.05);
+/* Add top padding to content so it’s not hidden under navbar */
+body {
+  padding-top: 100px; /* adjust to navbar height */
 }
 
-/* ========================
-   SECTIONS
-======================== */
-.section {
-  margin: 30px auto;
-  max-width: 900px;
-  padding: 25px 15px;
-  backdrop-filter: blur(15px) saturate(180%);
-  -webkit-backdrop-filter: blur(15px) saturate(180%);
-  background-color: rgba(30, 35, 60, 0.6);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-}
-
-.section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.section p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-.section ul {
-  margin-top: 10px;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-.section ul li {
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
-
-/* ========================
-   PRICING CARDS & PLANS
-======================== */
-.pricing-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
-.plan {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 15px;
-  width: 100%;
-  max-width: 220px;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s, background 0.3s;
-}
-
-.plan:hover {
-  transform: scale(1.05);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.plan .price {
-  font-size: 1.3rem;
-  margin: 10px 0;
-}
-
-/* ========================
-   TESTIMONIALS
-======================== */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-
-.testimonial {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.testimonial .author {
-  margin-top: 8px;
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: #ccc;
-}
-
-/* ========================
-   FOOTER
-======================== */
-footer.footer {
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  backdrop-filter: blur(15px) saturate(180%);
-  -webkit-backdrop-filter: blur(15px) saturate(180%);
-  background-color: rgba(20, 25, 50, 0.7);
-  border-radius: 16px 16px 0 0;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 0.85rem;
-  color: #ccc;
-}
-
-/* ========================
-   RESPONSIVE GLOBAL
-======================== */
+/* MOBILE RESPONSIVE */
 @media screen and (max-width: 768px) {
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 15px;
-  }
-
-  /* FIXED LOGO ON MOBILE */
-  nav .logo img {
-    position: static;   /* remove absolute */
-    transform: none;    /* remove translate */
+  .sticky-nav .logo img {
+    position: static;
+    transform: none;
+    max-width: 180px;
     margin-bottom: 10px;
-    max-width: 120px;   /* smaller logo */
   }
 
-  nav ul {
+  .nav-links {
     flex-direction: column;
-    gap: 10px;
     width: 100%;
-    margin: 0;
-    padding: 0;
   }
 
-  nav ul li {
+  .nav-links li {
     width: 100%;
     text-align: center;
   }
 
-  .header-glass {
-    padding: 25px 15px;
+  .nav-links .dropdown {
+    position: static;
+    display: none;
   }
 
-  .header-glass h1 {
-    font-size: 1.6rem;
-  }
-
-  .header-glass p {
-    font-size: 0.95rem;
-  }
-
-  .hero-btn {
-    padding: 8px 20px;
-    font-size: 0.85rem;
-  }
-
-  .section {
-    padding: 20px 10px;
-  }
-
-  .pricing-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .plan {
-    max-width: 100%;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .header-glass h1 {
-    font-size: 1.4rem;
-  }
-
-  .header-glass p {
-    font-size: 0.85rem;
-  }
-
-  .hero-btn {
-    padding: 6px 15px;
-    font-size: 0.8rem;
-  }
-
-  nav ul li a {
-    font-size: 0.85rem;
-    padding: 6px 8px;
+  /* Optional: toggle class 'open' via JS for mobile */
+  .nav-links li.open .dropdown {
+    display: block;
   }
 }
