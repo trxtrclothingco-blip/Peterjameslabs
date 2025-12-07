@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peter James Labs – Privacy Policy</title>
+<title>Peter James Labs – Privacy</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +13,11 @@
 <nav class="sticky-nav">
   <div class="logo">
     <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
+  </div>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
@@ -32,7 +37,7 @@
 
 <section class="section privacy">
   <h2>Privacy Policy</h2>
-  <p>This is placeholder text for your privacy policy. You can update it with your actual privacy statements regarding user data, cookies, and website usage. Make sure it complies with UK/EU laws if applicable.</p>
+  <p>Your privacy policy content goes here. Fill in all the necessary details about how you handle user data and privacy.</p>
 </section>
 
 <footer class="footer">
@@ -42,6 +47,13 @@
 </div>
 
 <script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 const dropdownParents = document.querySelectorAll('.dropdown-parent');
 dropdownParents.forEach(parent => {
   parent.addEventListener('click', function(e) {
@@ -49,9 +61,17 @@ dropdownParents.forEach(parent => {
     this.classList.toggle('open');
   });
 });
+
 document.addEventListener('click', function(e) {
   dropdownParents.forEach(parent => {
     if (!parent.contains(e.target)) parent.classList.remove('open');
+  });
+});
+
+const allLinks = document.querySelectorAll('.nav-links a');
+allLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
   });
 });
 </script>
