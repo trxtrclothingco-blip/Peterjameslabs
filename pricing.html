@@ -8,73 +8,63 @@
 </head>
 <body>
 
-<nav>
-  <!-- Replaced text logo with image at 200px -->
+<nav class="sticky-nav">
   <div class="logo">
-    <img src="images/IMG_9677.jpeg" alt="Logo" style="max-width:200px; height:auto;">
+    <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo" style="max-width:200px; height:auto;">
   </div>
-  <ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+  <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
     <li><a href="testimonials.html">Testimonials</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<section class="section pricing">
-  <h2>Pricing</h2>
-  <div class="pricing-cards">
-    <div class="plan">
-      <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Peter James Labs</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<div class="content-wrapper">
+  <section class="section pricing">
+    <h2>Pricing</h2>
+    <div class="pricing-cards">
 
-<body>
+      <div class="plan">
+        <h3>Basic Package</h3>
+        <div class="price">£100 / month</div>
+        <ul>
+          <li>Professional business website</li>
+          <li>Fast 15–30 minute setup</li>
+          <li>Mobile optimized</li>
+          <li>SEO optimized</li>
+          <li>Fully managed & updated</li>
+          <li>No hidden fees</li>
+        </ul>
+      </div>
 
-  <nav class="sticky-nav">
-    <div class="logo"><img src="images/IMG_9677.jpeg"></div>
-    <div class="hamburger"><span></span><span></span><span></span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+      <div class="plan">
+        <h3>Premium Package</h3>
+        <div class="price">Custom</div>
+        <ul>
+          <li>Everything in Basic Package</li>
+          <li>Full advertising setup</li>
+          <li>Google Maps optimization</li>
+          <li>Social media advertising</li>
+          <li>Lead generation funnels</li>
+        </ul>
+      </div>
 
-  <div class="content-wrapper">
-    <section class="section">
-      <h2>Contact Us</h2>
-      <p>📞 07534 472099</p>
-      <p>Email: support@peterjameslabs.com</p>
-    </section>
-  </div>
-
-  <script>
-    document.querySelector('.hamburger').addEventListener('click',()=>{
-      document.querySelector('.nav-links').classList.toggle('active');
-    });
-  </script>
-
-</body>
-</html>
-      </ul>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
-<footer>
+<footer class="footer">
   Peter James Labs © 2025 — All Rights Reserved
 </footer>
+
+<script>
+document.querySelector('.hamburger').addEventListener('click', () => {
+  document.querySelector('.nav-links').classList.toggle('active');
+});
+</script>
 
 </body>
 </html>
