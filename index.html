@@ -14,23 +14,6 @@
   body { font-family:'Montserrat', sans-serif; background:#f7f7f7; color:#333; line-height:1.6; }
   a { text-decoration:none; color:inherit; }
 
-  /* Navigation Bar */
-  nav {
-    background:#ffffff;
-    display:flex;
-    justify-content: space-between;
-    align-items:center;
-    padding:15px 40px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.05);
-    position:sticky;
-    top:0;
-    z-index:1000;
-  }
-  nav .logo { font-weight:700; font-size:22px; color:#4da6ff; }
-  nav ul { list-style:none; display:flex; gap:30px; }
-  nav ul li { font-weight:600; }
-  nav ul li a:hover { color:#3399ff; }
-
   /* Header / Hero */
   header { 
     background:#ffffff; 
@@ -113,7 +96,6 @@
 
   /* Responsive */
   @media(max-width:768px){
-    nav ul { flex-direction:column; gap:15px; margin-top:10px; }
     header h1 { font-size:36px; }
     header p { font-size:18px; }
     .plan { width:90%; }
@@ -121,15 +103,6 @@
 </style>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav>
-  <div class="logo">Peter James Labs</div>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About Us</a></li>
-  </ul>
-</nav>
 
 <!-- Header / Hero -->
 <header id="home">
@@ -141,7 +114,11 @@
 <!-- About Us Section -->
 <section class="about-us" id="about">
   <h2>About Us</h2>
-  <p>At Peter James Labs, we provide **affordable, professional websites** for small businesses. Our services eliminate the large upfront costs usually associated with web development, delivering fully managed, SEO-optimized, and mobile-friendly websites that help your business grow online. We also provide advertising setup and lead generation strategies for premium clients. Our goal is to make website ownership simple, cost-effective, and professional—so you can focus on what you do best.</p>
+  <p>At Peter James Labs, we provide <strong>affordable, professional websites</strong> for small businesses. 
+  Our services eliminate the large upfront costs usually associated with web development, delivering fully 
+  managed, SEO-optimized, and mobile-friendly websites that help your business grow online. We also provide 
+  advertising setup and lead generation strategies for premium clients. Our goal is to make website ownership 
+  simple, cost-effective, and professional—so you can focus on what you do best.</p>
 </section>
 
 <!-- Pricing Section -->
