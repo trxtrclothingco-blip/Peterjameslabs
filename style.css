@@ -112,7 +112,7 @@ ul {
 /* HEADER / HERO SECTION         */
 /* ============================= */
 .header-glass {
-  margin-top: 100px;
+  margin-top: 120px; /* push down so nav doesn't cover */
   text-align: center;
   padding: 80px 20px;
   background: rgba(255, 255, 255, 0.05);
@@ -121,6 +121,7 @@ ul {
   border-radius: 16px;
   margin-left: 20px;
   margin-right: 20px;
+  scroll-margin-top: 140px; /* fixes anchor links */
 }
 
 .header-glass h1 {
@@ -152,12 +153,13 @@ ul {
 /* SECTIONS                      */
 /* ============================= */
 .section {
-  padding: 60px 20px;
+  padding: 80px 20px; /* extra top padding for nav */
   margin: 20px auto;
   max-width: 1200px;
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(15px);
   border-radius: 16px;
+  scroll-margin-top: 140px; /* fixes anchor links */
 }
 
 .section h2 {
@@ -173,7 +175,7 @@ ul {
 }
 
 /* ============================= */
-/* PRICING / PORTFOLIO CARDS     */
+/* PRICING / PORTFOLIO / CARDS   */
 /* ============================= */
 .pricing-cards, .testimonials-grid {
   display: grid;
@@ -246,7 +248,7 @@ ul {
 
   .header-glass {
     padding: 50px 10px;
-    margin: 80px 10px 20px 10px;
+    margin: 100px 10px 20px 10px;
   }
 
   .header-glass h1 {
@@ -255,5 +257,9 @@ ul {
 
   .header-glass p {
     font-size: 1rem;
+  }
+
+  .section {
+    padding: 60px 10px;
   }
 }
