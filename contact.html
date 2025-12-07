@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Peter James Labs – Contact</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peter James Labs – Contact</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVIGATION -->
 <nav class="sticky-nav">
   <div class="logo">
     <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
   </div>
-
   <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
     <li class="dropdown-parent">
-      <a href="#">Pages &#9662;</a>
+      <a href="#">Pages ▼</a>
       <ul class="dropdown">
-        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
       </ul>
     </li>
   </ul>
 </nav>
-  
-<!-- HERO HEADER -->
-<header class="header-glass" style="text-align:center;">
-  <h1>Contact Us</h1>
-  <p>Get your professional website setup quickly and affordably</p>
-</header>
 
-<!-- CONTACT SECTION -->
 <section class="section contact">
   <h2>Contact Us</h2>
-  <p>Call us today to get your professional website set up quickly and affordably.</p>
+  <p>Call us today to get your professional website setup quickly and affordably.</p>
   <a href="tel:07521482302" class="hero-btn">Call 07521 482302</a>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   Peter James Labs © 2025 — All Rights Reserved
 </footer>
 
+<script>
+const dropdownParents = document.querySelectorAll('.dropdown-parent');
+dropdownParents.forEach(parent => {
+  parent.addEventListener('click', function(e) {
+    e.preventDefault();
+    this.classList.toggle('open');
+  });
+});
+document.addEventListener('click', function(e) {
+  dropdownParents.forEach(parent => {
+    if (!parent.contains(e.target)) parent.classList.remove('open');
+  });
+});
+</script>
 </body>
 </html>
