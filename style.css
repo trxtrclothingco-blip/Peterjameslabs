@@ -9,7 +9,7 @@
 /* BODY */
 body {
   background: #ffffff; /* white background */
-  color: #00cfff; /* neon blue text */
+  color: #333333; /* dark grey text */
   line-height: 1.6;
 }
 
@@ -33,10 +33,10 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 15px 40px;
-  border-bottom: 1px solid rgba(0, 204, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 64, 128, 0.3);
   border-radius: 0 0 16px 16px;
   z-index: 1000;
-  box-shadow: 0 0 12px rgba(0, 204, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 64, 128, 0.3);
 }
 
 /* LOGO */
@@ -59,7 +59,7 @@ body {
 
 .nav-links li a {
   text-decoration: none;
-  color: #00cfff; /* neon blue */
+  color: #004080; /* professional blue */
   padding: 8px 14px;
   border-radius: 8px;
   font-weight: 500;
@@ -67,8 +67,8 @@ body {
 }
 
 .nav-links li a:hover {
-  background-color: rgba(0, 204, 255, 0.2);
-  color: #00a8cc;
+  background-color: rgba(0, 64, 128, 0.1);
+  color: #003366;
 }
 
 /* HAMBURGER MENU */
@@ -83,7 +83,7 @@ body {
   display: block;
   height: 3px;
   width: 25px;
-  background: #00cfff;
+  background: #004080;
   border-radius: 3px;
 }
 
@@ -100,8 +100,8 @@ body {
   margin: 20px auto;
   background-color: #f0f0f0; /* light grey */
   border-radius: 16px;
-  border: 2px solid rgba(0, 204, 255, 0.3);
-  box-shadow: 0 0 15px rgba(0, 204, 255, 0.2);
+  border: 2px solid rgba(0, 64, 128, 0.3);
+  box-shadow: 0 0 10px rgba(0, 64, 128, 0.1);
 }
 
 /* HEADINGS */
@@ -109,26 +109,27 @@ body {
   font-size: 2.5em;
   text-align: center;
   margin-bottom: 40px;
-  color: #00cfff;
+  color: #004080; /* stronger professional blue */
 }
 
 /* HERO BUTTON */
 .hero-btn {
   display: inline-block;
-  background-color: #e6e6e6;
-  color: #00cfff;
+  background-color: #004080; /* deeper blue */
+  color: #ffffff;
   padding: 12px 25px;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s;
-  border: 2px solid #00cfff;
+  border: 2px solid #003366;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* clean shadow */
 }
 
 .hero-btn:hover {
-  background-color: #00cfff;
-  color: #fff;
-  border-color: #00a8cc;
+  background-color: #003366;
+  color: #ffffff;
+  border-color: #002244;
 }
 
 /* PRICING CARDS */
@@ -146,8 +147,8 @@ body {
   min-width: 250px;
   max-width: 300px;
   text-align: center;
-  border: 2px solid rgba(0, 204, 255, 0.3);
-  box-shadow: 0 0 12px rgba(0, 204, 255, 0.2);
+  border: 2px solid rgba(0, 64, 128, 0.3);
+  box-shadow: 0 0 12px rgba(0, 64, 128, 0.2);
   transition: transform 0.3s;
 }
 
@@ -159,12 +160,12 @@ body {
   font-size: 1.5em;
   font-weight: 600;
   margin: 15px 0;
-  color: #00cfff;
+  color: #004080;
 }
 
 .plan ul li {
   padding: 6px 0;
-  color: #00cfff;
+  color: #333333;
 }
 
 /* TESTIMONIALS GRID */
@@ -178,15 +179,15 @@ body {
   background: #f0f0f0;
   border-radius: 16px;
   padding: 20px;
-  border: 2px solid rgba(0, 204, 255, 0.3);
-  box-shadow: 0 0 12px rgba(0, 204, 255, 0.2);
+  border: 2px solid rgba(0, 64, 128, 0.3);
+  box-shadow: 0 0 12px rgba(0, 64, 128, 0.2);
 }
 
 .testimonial .author {
   margin-top: 15px;
   font-weight: 600;
   font-size: 0.95em;
-  color: #00cfff;
+  color: #004080;
 }
 
 /* FOOTER */
@@ -196,9 +197,9 @@ body {
   margin-top: 40px;
   background: #f0f0f0;
   border-radius: 16px 16px 0 0;
-  border: 2px solid rgba(0, 204, 255, 0.3);
-  box-shadow: 0 0 12px rgba(0, 204, 255, 0.2);
-  color: #00cfff;
+  border: 2px solid rgba(0, 64, 128, 0.3);
+  box-shadow: 0 0 12px rgba(0, 64, 128, 0.2);
+  color: #333333;
 }
 
 /* RESPONSIVE */
