@@ -7,26 +7,31 @@
 <link rel="icon" type="image/jpeg" href="/images/IMG_9677.jpeg">
 
 <style>
-/* Buy Now button styling */
+/* Buy Now button frosted glass styling */
 .buy-btn {
   display: inline-block;
   padding: 12px 25px;
-  background-color: #0070f3; /* Normal color */
-  color: white;
+  background: rgba(173, 216, 230, 0.2); /* Light glacier-blue tint */
+  color: #ffffff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 12px;
   font-weight: bold;
-  transition: all 0.3s ease; /* smooth animation */
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   margin-top: 10px;
 }
 
 .buy-btn:hover {
-  background-color: #00c853; /* Changes color on hover */
-  transform: scale(1.05);    /* Slightly bigger */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Pop-out shadow */
+  background: rgba(173, 216, 230, 0.4); /* Slightly stronger tint */
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  color: #f0f8ff; /* Brighter text on hover */
 }
 
-/* Optional: Center buttons inside pricing cards */
+/* Center buttons inside pricing cards */
 .plan {
   text-align: center;
 }
