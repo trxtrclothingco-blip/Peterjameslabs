@@ -31,7 +31,6 @@
 </div>
 
 <!-- ================= PARTNER / REFERRAL PROGRAM ================= -->
-<div class="content-wrapper">
 <section class="referral-section" id="partners">
   <div class="container">
 
@@ -102,19 +101,23 @@
 
   </div>
 </section>
-</div>
 
 <footer class="footer">
   Peter James Labs © 2025 — All Rights Reserved
 </footer>
 
 <script>
-document.querySelector('.hamburger').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('active');
+/* Burger toggle exactly like index.html */
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
+
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.remove('active');
+    navLinks.classList.remove('active');
   });
 });
 </script>
