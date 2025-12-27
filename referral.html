@@ -1,40 +1,145 @@
-<section class="referral-section" id="partners" style="text-align:center;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partner / Referral Program – Peter James Labs</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="/images/IMG_9677.jpeg">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f9f9f9;
+  }
+  .sticky-nav {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 20px;
+    background:#ffffff;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+    z-index:1000;
+  }
+  .nav-links {
+    list-style:none;
+    display:flex;
+    gap:20px;
+  }
+  .nav-links li a {
+    text-decoration:none;
+    color:#0b1f3a;
+    font-weight:600;
+  }
+  .hamburger {
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+  }
+  .hamburger span {
+    width:25px;
+    height:3px;
+    background:#0b1f3a;
+    margin:4px 0;
+  }
+  @media(max-width:768px){
+    .nav-links {
+      display:none;
+      flex-direction:column;
+      background:#ffffff;
+      position:absolute;
+      top:60px;
+      right:0;
+      width:200px;
+      padding:10px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.15);
+    }
+    .nav-links.active { display:flex; }
+    .hamburger { display:flex; }
+  }
+
+  /* Referral section styles */
+  .referral-section { text-align:center; padding:40px 20px; }
+  .referral-header h2 { color:#0b1f3a; font-size:2em; margin-bottom:10px; }
+  .referral-header p { font-size:1.1em; margin-bottom:30px; }
+
+  .referral-block {
+    border:2px solid #0b1f3a;
+    border-radius:18px;
+    padding:25px;
+    margin:20px auto;
+    max-width:700px;
+    text-align:center;
+    background:#ffffff;
+  }
+
+  .referral-block h3 { color:#0b1f3a; margin-bottom:15px; }
+
+  .referral-block p, .referral-block ul, .referral-block ol {
+    margin:10px 0;
+  }
+
+  .referral-block ol { list-style-position:inside; padding-left:0; }
+
+  .referral-whatsapp { margin-top:40px; text-align:center; }
+  .referral-whatsapp a {
+    display:inline-block;
+    margin-top:15px;
+    padding:16px 26px;
+    background:#25D366;
+    color:#ffffff;
+    font-weight:600;
+    border-radius:30px;
+    text-decoration:none;
+  }
+
+  .footer { text-align:center; padding:20px; background:#0b1f3a; color:#fff; margin-top:40px; }
+</style>
+</head>
+
+<body>
+
+<nav class="sticky-nav">
+  <div class="logo"><img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo" style="height:50px;"></div>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="partners.html">Partners</a></li>
+  </ul>
+</nav>
+
+<section class="referral-section" id="partners">
   <div class="container">
 
     <div class="referral-header">
-      <h2 style="color:#0b1f3a;">Partner / Referral Program</h2>
-      <p class="referral-subtitle">
-        Earn recurring commission by connecting businesses with professional websites.
-      </p>
+      <h2>Partner / Referral Program</h2>
+      <p>Earn recurring commission by connecting businesses with professional websites.</p>
     </div>
 
     <div class="referral-content">
 
-      <div class="referral-block" style="border:2px solid #0b1f3a;border-radius:18px;padding:20px;margin:20px auto;max-width:700px;">
-        <h3 style="color:#0b1f3a;">Who It’s For</h3>
-        <p>
-          This program is for freelancers, marketers, consultants, accountants, and anyone
-          already working with small businesses.
-        </p>
-        <p>
-          You don’t sell, manage clients, or provide support — you simply make the introduction.
-        </p>
+      <div class="referral-block">
+        <h3>Who It’s For</h3>
+        <p>This program is for freelancers, marketers, consultants, accountants, and anyone already working with small businesses.</p>
+        <p>You don’t sell, manage clients, or provide support — you simply make the introduction.</p>
       </div>
 
-      <div class="referral-block" style="border:2px solid #0b1f3a;border-radius:18px;padding:20px;margin:20px auto;max-width:700px;">
-        <h3 style="color:#0b1f3a;">Commission Structure</h3>
+      <div class="referral-block">
+        <h3>Commission Structure</h3>
         <p><strong>£50 & £75 packages:</strong> 15% recurring commission</p>
         <p><strong>£100 & £200 packages:</strong> 20% recurring commission</p>
-        <p>
-          As long as the client stays active, you continue to get paid monthly.
-        </p>
-        <p>
-          No targets. No contracts. No limits.
-        </p>
+        <p>As long as the client stays active, you continue to get paid monthly.</p>
+        <p>No targets. No contracts. No limits.</p>
       </div>
 
-      <div class="referral-block" style="border:2px solid #0b1f3a;border-radius:18px;padding:20px;margin:20px auto;max-width:700px;">
-        <h3 style="color:#0b1f3a;">Example Monthly Earnings</h3>
+      <div class="referral-block">
+        <h3>Example Monthly Earnings</h3>
 
         <p><strong>£50 package (15%)</strong><br>
           1 referral → £7.50 / month<br>
@@ -61,9 +166,9 @@
         </p>
       </div>
 
-      <div class="referral-block" style="border:2px solid #0b1f3a;border-radius:18px;padding:20px;margin:20px auto;max-width:700px;">
-        <h3 style="color:#0b1f3a;">How It Works</h3>
-        <ol style="list-style-position:inside;">
+      <div class="referral-block">
+        <h3>How It Works</h3>
+        <ol>
           <li>You refer a business</li>
           <li>We build and manage their website</li>
           <li>You get paid every month</li>
@@ -72,28 +177,28 @@
 
     </div>
 
-    <!-- WhatsApp CTA -->
-    <div class="referral-whatsapp" style="margin-top:30px;">
+    <div class="referral-whatsapp">
       <p><strong>Prefer WhatsApp?</strong><br>Message us directly to become a referral partner.</p>
-
-      <a 
-        href="https://wa.me/447XXXXXXXXX?text=Hi%20Peter%2C%20I%E2%80%99m%20interested%20in%20your%20Partner%20Referral%20Program."
-        target="_blank"
-        rel="noopener noreferrer"
-        style="
-          display:inline-block;
-          margin-top:15px;
-          padding:16px 26px;
-          background:#25D366;
-          color:#ffffff;
-          font-weight:600;
-          border-radius:30px;
-          text-decoration:none;
-        "
-      >
-        Chat on WhatsApp
-      </a>
+      <a href="https://wa.me/447XXXXXXXXX?text=Hi%20Peter%2C%20I%E2%80%99m%20interested%20in%20your%20Partner%20Referral%20Program." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
     </div>
 
   </div>
 </section>
+
+<footer class="footer">
+  Peter James Labs © 2025 — All Rights Reserved
+</footer>
+
+<script>
+document.querySelector('.hamburger').addEventListener('click', () => {
+  document.querySelector('.nav-links').classList.toggle('active');
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('active');
+  });
+});
+</script>
+
+</body>
+</html>
