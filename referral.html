@@ -6,6 +6,52 @@
 <title>Partner / Referral Program – Peter James Labs</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="/images/IMG_9677.jpeg">
+<style>
+/* Center all referral content */
+.referral-section { text-align:center; padding:40px 20px; }
+.referral-header h2 { color:#0b1f3a; font-size:2em; margin-bottom:10px; }
+.referral-header p { font-size:1.1em; margin-bottom:30px; }
+
+/* Curved boxes for paragraphs */
+.referral-block {
+  border:2px solid #0b1f3a;
+  border-radius:18px;
+  padding:25px;
+  margin:20px auto;
+  max-width:700px;
+  text-align:center;
+  background:#ffffff;
+}
+
+.referral-block h3 { color:#0b1f3a; margin-bottom:15px; }
+
+.referral-block p, .referral-block ul, .referral-block ol {
+  margin:10px 0;
+  line-height:1.6;
+}
+
+.referral-block ol { list-style-position:inside; padding-left:0; }
+
+.referral-whatsapp {
+  margin-top:40px;
+  text-align:center;
+}
+
+.referral-whatsapp a {
+  display:inline-block;
+  margin-top:15px;
+  padding:16px 26px;
+  background:#25D366;
+  color:#ffffff;
+  font-weight:600;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:1.1em;
+}
+
+/* Footer */
+.footer { text-align:center; padding:20px; background:#0b1f3a; color:#fff; margin-top:40px; }
+</style>
 </head>
 
 <body>
@@ -43,43 +89,48 @@
 
       <div class="referral-block">
         <h3>Who It’s For</h3>
-        <p>This program is for freelancers, marketers, consultants, accountants, and anyone already working with small businesses.</p>
-        <p>You don’t sell, manage clients, or provide support — you simply make the introduction.</p>
+        <p>Freelancers, marketers, consultants, accountants, or anyone already working with small businesses.</p>
+        <p>You don’t sell, manage clients, or provide support — just make the introduction.</p>
       </div>
 
       <div class="referral-block">
         <h3>Commission Structure</h3>
-        <p><strong>£50 & £75 packages:</strong> 15% recurring commission</p>
-        <p><strong>£100 & £200 packages:</strong> 20% recurring commission</p>
-        <p>As long as the client stays active, you continue to get paid monthly.</p>
+        <p><strong>£50 package:</strong> £10 recurring per month</p>
+        <p><strong>£75 package:</strong> £20 recurring per month</p>
+        <p><strong>£100 package:</strong> £25 recurring per month</p>
+        <p><strong>£200 package:</strong> £50 recurring per month</p>
         <p>No targets. No contracts. No limits.</p>
       </div>
 
       <div class="referral-block">
         <h3>Example Monthly Earnings</h3>
 
-        <p><strong>£50 package (15%)</strong><br>
-          1 referral → £7.50 / month<br>
-          5 referrals → £37.50 / month<br>
-          10 referrals → £75 / month
+        <p><strong>£50 package</strong><br>
+          1 referral → £10 / month<br>
+          5 referrals → £50 / month<br>
+          10 referrals → £100 / month<br>
+          25 referrals → £250 / month
         </p>
 
-        <p><strong>£75 package (15%)</strong><br>
-          1 referral → £11.25 / month<br>
-          5 referrals → £56.25 / month<br>
-          10 referrals → £112.50 / month
-        </p>
-
-        <p><strong>£100 package (20%)</strong><br>
+        <p><strong>£75 package</strong><br>
           1 referral → £20 / month<br>
           5 referrals → £100 / month<br>
-          10 referrals → £200 / month
+          10 referrals → £200 / month<br>
+          25 referrals → £500 / month
         </p>
 
-        <p><strong>£200 package (20%)</strong><br>
-          1 referral → £40 / month<br>
-          5 referrals → £200 / month<br>
-          10 referrals → £400 / month
+        <p><strong>£100 package</strong><br>
+          1 referral → £25 / month<br>
+          5 referrals → £125 / month<br>
+          10 referrals → £250 / month<br>
+          25 referrals → £625 / month
+        </p>
+
+        <p><strong>£200 package</strong><br>
+          1 referral → £50 / month<br>
+          5 referrals → £250 / month<br>
+          10 referrals → £500 / month<br>
+          25 referrals → £1,250 / month
         </p>
       </div>
 
@@ -107,7 +158,7 @@
 </footer>
 
 <script>
-/* Burger toggle exactly like index.html */
+/* Burger toggle */
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
