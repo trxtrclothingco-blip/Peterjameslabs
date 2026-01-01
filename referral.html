@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(function () {
+  const PASSWORD = "@PJL2025";
+  const entered = prompt("This page is restricted. Enter password:");
+
+  if (entered !== PASSWORD) {
+    alert("Access denied.");
+    window.location.href = "index.html";
+  }
+})();
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Partner / Referral Program – Peter James Labs</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="/images/IMG_9677.jpeg">
+
 <style>
 .referral-section { text-align:center; padding:40px 20px; }
 .referral-header h2 { color:#0b1f3a; font-size:2em; margin-bottom:10px; }
@@ -47,7 +60,13 @@
   font-size:1.1em;
 }
 
-.footer { text-align:center; padding:20px; background:#0b1f3a; color:#fff; margin-top:40px; }
+.footer {
+  text-align:center;
+  padding:20px;
+  background:#0b1f3a;
+  color:#fff;
+  margin-top:40px;
+}
 </style>
 </head>
 
@@ -141,7 +160,9 @@
 
     <div class="referral-whatsapp">
       <p><strong>Prefer WhatsApp?</strong><br>Message us directly to become a referral partner.</p>
-      <a href="https://wa.me/447521482302?text=Hi%20Peter%2C%20I%E2%80%99m%20interested%20in%20your%20Partner%20Referral%20Program." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+      <a href="https://wa.me/447521482302?text=Hi%20Peter%2C%20I%E2%80%99m%20interested%20in%20your%20Partner%20Referral%20Program." target="_blank" rel="noopener noreferrer">
+        Chat on WhatsApp
+      </a>
     </div>
 
   </div>
