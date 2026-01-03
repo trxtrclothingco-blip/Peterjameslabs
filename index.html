@@ -9,19 +9,12 @@
   <link rel="icon" type="image/png" href="images/IMG_9677.jpeg">
 
   <style>
-    /* =======================
-       RESET
-    ======================== */
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
+      min-height: 100vh;
       font-family: 'Inter', sans-serif;
       color: #ffffff;
-      min-height: 100vh;
       overflow-x: hidden;
     }
 
@@ -35,9 +28,6 @@
       z-index: -1;
     }
 
-    /* =======================
-       NAVIGATION
-    ======================== */
     nav.sticky-nav {
       position: fixed;
       top: 0;
@@ -48,76 +38,26 @@
       padding: 18px 20px;
       background: rgba(0,0,0,0.55);
       z-index: 1000;
-      backdrop-filter: blur(12px);
     }
 
-    .logo {
+    .logo img {
       max-width: 160px;
     }
 
-    /* NAV LINKS */
     .nav-links {
       list-style: none;
       display: flex;
       gap: 24px;
       position: absolute;
       right: 40px;
-      top: 50%;
-      transform: translateY(-50%);
     }
 
     .nav-links a {
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
       font-weight: 600;
-      padding: 8px 12px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
     }
 
-    .nav-links a:hover {
-      background: rgba(0,136,255,0.2);
-    }
-
-    /* =======================
-       HAMBURGER MENU (mobile)
-    ======================== */
-    .hamburger-wrapper {
-      display: none;
-      justify-content: center;
-      margin-top: 70px; /* below navbar */
-    }
-
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      cursor: pointer;
-      z-index: 1001;
-    }
-
-    .hamburger span {
-      display: block;
-      height: 3px;
-      width: 28px;
-      background: #00cfff;
-      border-radius: 3px;
-      transition: all 0.3s ease;
-    }
-
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    /* =======================
-       CONTENT WRAPPER
-    ======================== */
     .content-wrapper {
       padding-top: 140px;
       max-width: 1200px;
@@ -136,7 +76,7 @@
       padding: 40px 20px;
     }
 
-    /* BUTTONS */
+    /* BUTTON ROW */
     .button-wrapper {
       display: flex;
       justify-content: center;
@@ -164,6 +104,7 @@
       transform: scale(1.05);
     }
 
+    /* SIZE RULES */
     .btn-small {
       flex: 1;
       height: 54px;
@@ -183,30 +124,9 @@
       margin-top: 40px;
     }
 
-    /* =======================
-       RESPONSIVE
-    ======================== */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
-        position: relative;
-        flex-direction: column;
-        gap: 16px;
-        margin-top: 0;
-        background: rgba(0,0,0,0.85);
-        padding: 20px;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger-wrapper {
-        display: flex;
-      }
-
-      .section h2 {
-        font-size: 2.2rem;
       }
     }
   </style>
@@ -214,66 +134,50 @@
 
 <body>
 
-  <!-- NAV -->
-  <nav class="sticky-nav">
-    <!-- Centered Logo -->
-    <img src="images/IMG_9677.jpeg" class="logo" alt="Peter James Labs Logo">
+<nav class="sticky-nav">
+  <div class="logo">
+    <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
+  </div>
 
-    <!-- Navigation Links -->
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="referral.html">Partners</a></li>
-    </ul>
-  </nav>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="referral.html">Partners</a></li>
+  </ul>
+</nav>
 
-  <!-- Hamburger menu below navbar -->
-  <div class="hamburger-wrapper">
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+<div class="content-wrapper">
+
+  <img src="images/IMG_9677.jpeg" class="header-img" alt="Hero Image">
+
+  <section class="section">
+    <h2>Welcome to Peter James Labs</h2>
+    <p>
+      Say goodbye to high upfront costs — get a fast, mobile-friendly, SEO-optimized website that’s fully managed.
+      <br><br>
+      Get your website live in as little as 48 hours.
+    </p>
+
+    <!-- BUTTONS -->
+    <div class="button-wrapper">
+      <!-- CALL -->
+      <a href="tel:07521482302" class="btn-small">📱</a>
+
+      <!-- PACKAGES (CENTER & BIGGER) -->
+      <a href="pricing.html" class="btn-large">📦 Packages</a>
+
+      <!-- WHATSAPP -->
+      <a href="https://wa.me/447521482302" class="btn-small">💬</a>
     </div>
-  </div>
+  </section>
 
-  <div class="content-wrapper">
+</div>
 
-    <img src="images/IMG_9677.jpeg" class="header-img" alt="Hero Image">
-
-    <section class="section">
-      <h2>Welcome to Peter James Labs</h2>
-      <p>
-        Say goodbye to high upfront costs — get a fast, mobile-friendly, SEO-optimized website that’s fully managed.
-        <br><br>
-        Get your website live in as little as 48 hours.
-      </p>
-
-      <!-- BUTTONS -->
-      <div class="button-wrapper">
-        <a href="tel:07521482302" class="btn-small">📱</a>
-        <a href="pricing.html" class="btn-large">📦 Packages</a>
-        <a href="https://wa.me/447521482302" class="btn-small">💬</a>
-      </div>
-    </section>
-
-  </div>
-
-  <footer>
-    Peter James Labs © 2025 — All Rights Reserved
-  </footer>
-
-  <!-- JS for Hamburger -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active');
-    });
-  </script>
+<footer>
+  Peter James Labs © 2025 — All Rights Reserved
+</footer>
 
 </body>
 </html>
