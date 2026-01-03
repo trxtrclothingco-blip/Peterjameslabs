@@ -1,98 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peter James Labs – Home</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="/images/IMG_9677.jpeg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peter James Labs – Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="IMG_9677.jpeg">
 
-<style>
-.section {
-  text-align: center;
-}
+  <style>
+    /* Full-page background image - file in same folder as index.html */
+    body {
+      background: url('IMG_0923.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+    }
 
-.phone-box-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+    /* Dark semi-transparent overlay for excellent text readability */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 23, 42, 0.70); /* Adjust opacity if needed (0.6–0.8 works well) */
+      backdrop-filter: blur(3px); /* Subtle futuristic blur */
+      z-index: -1;
+    }
 
-.phone-box {
-  display: inline-block;
-  background: linear-gradient(135deg, #00cfff, #0088ff);
-  color: #ffffff;
-  padding: 14px 35px;
-  border-radius: 14px;
-  font-weight: bold;
-  font-size: 1.25em;
-  text-decoration: none;
-  box-shadow: 0 0 12px rgba(0, 200, 255, 0.7);
-  transition: 0.25s ease;
-}
+    .section {
+      text-align: center;
+    }
 
-.phone-box:hover {
-  transform: scale(1.07);
-  box-shadow: 0 0 18px rgba(0, 200, 255, 1);
-}
-</style>
+    .phone-box-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .phone-box {
+      display: inline-block;
+      background: linear-gradient(135deg, #00cfff, #0088ff);
+      color: #ffffff;
+      padding: 14px 35px;
+      border-radius: 14px;
+      font-weight: bold;
+      font-size: 1.25em;
+      text-decoration: none;
+      box-shadow: 0 0 12px rgba(0, 200, 255, 0.7);
+      transition: 0.25s ease;
+    }
+
+    .phone-box:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 18px rgba(0, 200, 255, 1);
+    }
+  </style>
 </head>
 
 <body>
 
-<nav class="sticky-nav">
-  <div class="logo">
-    <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
-  </div>
-
-  <div class="hamburger">
-    <span></span><span></span><span></span>
-  </div>
-
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <!-- LINK TO REFERRAL PAGE -->
-    <li><a href="referral.html">Partners</a></li>
-  </ul>
-</nav>
-
-<div class="content-wrapper">
-  <img src="images/IMG_9677.jpeg" alt="Top Image" class="header-img">
-
-  <section class="section">
-    <h2>Welcome to Peter James Labs</h2>
-    <p>Professional websites, get started in 15–30 minutes. Fully managed, mobile and SEO optimised.</p>
-    <p>
-      At Peter James Labs, we eliminate the high costs traditionally associated with website building.
-      Our websites are affordable, fully managed, and come with <strong>no contracts</strong>.
-    </p>
-
-    <div class="phone-box-wrapper">
-      <a href="tel:07521482302" class="phone-box">📞 07521 482302</a>
+  <nav class="sticky-nav">
+    <div class="logo">
+      <img src="IMG_9677.jpeg" alt="Peter James Labs Logo">
     </div>
-  </section>
-</div>
 
-<footer class="footer">
-  Peter James Labs © 2025 — All Rights Reserved
-</footer>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
 
-<script>
-/* Burger toggle */
-document.querySelector('.hamburger').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('active');
-});
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="referral.html">Partners</a></li>
+    </ul>
+  </nav>
 
-/* Close menu after click */
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.remove('active');
-  });
-});
-</script>
+  <div class="content-wrapper">
+    <img src="IMG_9677.jpeg" alt="Top Image" class="header-img">
+
+    <section class="section">
+      <h2>Welcome to Peter James Labs</h2>
+      <p>Professional websites, get started in 15–30 minutes. Fully managed, mobile and SEO optimised.</p>
+      <p>
+        At Peter James Labs, we eliminate the high costs traditionally associated with website building.
+        Our websites are affordable, fully managed, and come with <strong>no contracts</strong>.
+      </p>
+
+      <div class="phone-box-wrapper">
+        <a href="tel:07521482302" class="phone-box">📞 07521 482302</a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    Peter James Labs © 2025 — All Rights Reserved
+  </footer>
+
+  <script>
+    /* Burger toggle */
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    /* Close menu after click */
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
