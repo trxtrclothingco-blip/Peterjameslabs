@@ -1,3 +1,22 @@
+/* =====================
+   THEME VARIABLES
+===================== */
+
+:root {
+  --bg-overlay: rgba(0,0,0,0.55);
+  --text-color: #ffffff;
+  --nav-bg: rgba(0,0,0,0.55);
+  --footer-bg: rgba(0,0,0,0.6);
+  --bg-brightness: 0.35;
+}
+
+body[data-theme="light"] {
+  --bg-overlay: rgba(255,255,255,0.75);
+  --text-color: #0f172a;
+  --nav-bg: rgba(255,255,255,0.85);
+  --footer-bg: rgba(255,255,255,0.85);
+  --bg-brightness: 1;
+}
 /* =======================
    THEME VARIABLES
    Dark = default
