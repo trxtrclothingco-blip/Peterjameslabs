@@ -8,20 +8,22 @@
   <link rel="icon" type="image/png" href="IMG_9677.jpeg">
 
   <style>
-    /* Full-page background - same folder, less zoomed in */
+    /* Full-page background: covers entire screen, no distortion */
     body {
       background: url('IMG_0923.jpeg') no-repeat center center fixed;
-      background-size: 120%; /* Adjust this: 100% = exact fit, 120% = slightly larger, 150% = more zoomed */
+      background-size: cover; /* Key: fills screen perfectly without stretching */
       position: relative;
       min-height: 100vh;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Dark overlay for text readability */
+    /* Dark overlay for excellent text contrast */
     body::before {
       content: '';
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(10, 15, 30, 0.75); /* Stronger overlay for contrast */
+      background: rgba(10, 15, 30, 0.78); /* Strong overlay – adjust last value (0.7–0.85) if needed */
       backdrop-filter: blur(3px);
       z-index: -1;
     }
@@ -77,6 +79,7 @@
   </nav>
 
   <div class="content-wrapper">
+    <!-- Header image at the top -->
     <img src="IMG_9677.jpeg" alt="Top Image" class="header-img">
 
     <section class="section">
