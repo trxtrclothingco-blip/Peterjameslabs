@@ -27,6 +27,7 @@
       z-index: -1;
     }
 
+    /* NAV */
     nav.sticky-nav {
       position: fixed;
       top: 0;
@@ -34,7 +35,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 40px;
+      padding: 18px 24px;
       background: rgba(0,0,0,0.55);
       z-index: 1000;
     }
@@ -43,12 +44,14 @@
       max-width: 160px;
     }
 
-    .nav-right {
+    /* RIGHT SIDE CONTROLS */
+    .nav-controls {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 14px;
     }
 
+    /* NAV LINKS */
     .nav-links {
       list-style: none;
       display: flex;
@@ -61,19 +64,33 @@
       font-weight: 600;
     }
 
+    /* BURGER */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 26px;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 3px;
+    }
+
     /* THEME TOGGLE */
     .theme-toggle input {
       display: none;
     }
 
     .theme-toggle label {
-      width: 52px;
-      height: 28px;
+      width: 48px;
+      height: 26px;
       background: #1e293b;
       border-radius: 999px;
       position: relative;
       cursor: pointer;
-      transition: background 0.3s ease;
     }
 
     .theme-toggle label::after {
@@ -81,14 +98,14 @@
       position: absolute;
       top: 3px;
       left: 4px;
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
       background: #0f172a;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
+      font-size: 13px;
       transition: all 0.3s ease;
     }
 
@@ -97,18 +114,18 @@
     }
 
     .theme-toggle input:checked + label::after {
-      transform: translateX(24px);
+      transform: translateX(22px);
       content: '☀️';
       background: #ffffff;
     }
 
+    /* CONTENT */
     .content-wrapper {
       padding-top: 140px;
       max-width: 1200px;
       margin: auto;
       text-align: center;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 0 20px;
     }
 
     .header-img {
@@ -140,11 +157,6 @@
       text-decoration: none;
       border-radius: 14px;
       font-weight: 700;
-      transition: transform 0.2s;
-    }
-
-    .button-wrapper a:hover {
-      transform: scale(1.05);
     }
 
     .btn-small {
@@ -166,9 +178,26 @@
       margin-top: 40px;
     }
 
+    /* MOBILE */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.9);
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
       }
     }
   </style>
@@ -181,25 +210,30 @@
     <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
   </div>
 
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="referral.html">Partners</a></li>
-    </ul>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="referral.html">Partners</a></li>
+  </ul>
 
-    <!-- LIGHT MODE TOGGLE -->
+  <!-- BURGER + TOGGLE -->
+  <div class="nav-controls">
     <div class="theme-toggle">
       <input type="checkbox" id="themeSwitch">
       <label for="themeSwitch"></label>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
 </nav>
 
 <div class="content-wrapper">
-
   <img src="images/IMG_9677.jpeg" class="header-img" alt="Hero Image">
 
   <section class="section">
@@ -216,7 +250,6 @@
       <a href="https://wa.me/447521482302" class="btn-small">💬</a>
     </div>
   </section>
-
 </div>
 
 <footer>
@@ -225,6 +258,16 @@
 
 <!-- THEME SCRIPT -->
 <script src="js/theme.js"></script>
+
+<!-- BURGER SCRIPT -->
+<script>
+  const burger = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
