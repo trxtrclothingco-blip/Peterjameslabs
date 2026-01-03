@@ -5,25 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peter James Labs – Home</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="IMG_9677.jpeg">
+  <!-- Favicon with fallback if file missing -->
+  <link rel="icon" type="image/jpeg" href="IMG_9677.jpeg">
 
   <style>
-    /* Full-page background: covers entire screen, no distortion */
+    /* Full-page background: covers screen perfectly, no distortion */
     body {
       background: url('IMG_0923.jpeg') no-repeat center center fixed;
-      background-size: cover; /* Key: fills screen perfectly without stretching */
+      background-size: cover;
       position: relative;
       min-height: 100vh;
       margin: 0;
       padding: 0;
     }
 
-    /* Dark overlay for excellent text contrast */
+    /* Dark overlay for strong text contrast */
     body::before {
       content: '';
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(10, 15, 30, 0.78); /* Strong overlay – adjust last value (0.7–0.85) if needed */
+      background: rgba(10, 15, 30, 0.78);
       backdrop-filter: blur(3px);
       z-index: -1;
     }
@@ -62,7 +63,11 @@
 
   <nav class="sticky-nav">
     <div class="logo">
-      <img src="IMG_9677.jpeg" alt="Peter James Labs Logo">
+      <!-- Logo image with fallback if not found -->
+      <img src="IMG_9677.jpeg" 
+           alt="Peter James Labs Logo" 
+           loading="lazy"
+           onerror="this.style.display='none'; console.log('Logo image not found')">
     </div>
 
     <div class="hamburger">
@@ -79,8 +84,12 @@
   </nav>
 
   <div class="content-wrapper">
-    <!-- Header image at the top -->
-    <img src="IMG_9677.jpeg" alt="Top Image" class="header-img">
+    <!-- Top header image with fallback -->
+    <img src="IMG_9677.jpeg" 
+         alt="Top Image" 
+         class="header-img" 
+         loading="lazy"
+         onerror="this.style.display='none'; console.log('Header image not found')">
 
     <section class="section">
       <h2>Welcome to Peter James Labs</h2>
