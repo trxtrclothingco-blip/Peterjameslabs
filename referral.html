@@ -102,6 +102,7 @@
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
+    z-index: 1001;
   }
 
   .hamburger span {
@@ -190,16 +191,18 @@
 
   /* MOBILE */
   @media (max-width: 768px) {
+
     .nav-links {
       display: none;
       flex-direction: column;
       position: absolute;
       right: 20px;
       top: 70px;
-      background: rgba(0,0,0,0.9);
+      background: rgba(0,0,0,0.95);
       padding: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
       gap: 15px;
+      z-index: 1000;
     }
 
     .nav-links.active {
@@ -238,7 +241,9 @@
 
   <div class="mobile-menu-wrapper">
     <div class="hamburger">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
 </div>
@@ -299,14 +304,18 @@
 <script>
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
+  const mobileWrapper = document.querySelector('.mobile-menu-wrapper');
 
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    mobileWrapper.style.display =
+      navLinks.classList.contains('active') ? 'none' : 'flex';
   });
 
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('active');
+      mobileWrapper.style.display = 'flex';
     });
   });
 </script>
