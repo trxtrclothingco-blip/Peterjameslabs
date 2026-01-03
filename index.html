@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" href="images/IMG_9677.jpeg">
 
   <style>
+    /* RESET */
     body {
       margin: 0;
       padding: 0;
@@ -18,6 +19,7 @@
       overflow-x: hidden;
     }
 
+    /* FULL BACKGROUND */
     body::before {
       content: '';
       position: fixed;
@@ -28,12 +30,13 @@
       z-index: -1;
     }
 
+    /* NAV BAR */
     nav.sticky-nav {
       position: fixed;
       top: 0;
       width: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: center; /* center logo */
       align-items: center;
       padding: 18px 20px;
       background: rgba(0,0,0,0.55);
@@ -42,8 +45,10 @@
 
     .logo img {
       max-width: 160px;
+      height: auto;
     }
 
+    /* NAV LINKS (DESKTOP) */
     .nav-links {
       list-style: none;
       display: flex;
@@ -58,6 +63,7 @@
       font-weight: 600;
     }
 
+    /* CONTENT WRAPPER */
     .content-wrapper {
       padding-top: 140px;
       max-width: 1200px;
@@ -67,11 +73,13 @@
       padding-right: 20px;
     }
 
+    /* HERO IMAGE */
     .header-img {
       max-width: 100%;
       margin-bottom: 30px;
     }
 
+    /* SECTION */
     .section {
       padding: 40px 20px;
     }
@@ -117,6 +125,7 @@
       font-size: 1.2em;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 20px;
@@ -124,9 +133,56 @@
       margin-top: 40px;
     }
 
+    /* MOBILE BURGER MENU */
+    .mobile-menu-wrapper {
+      display: none;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 3px;
+    }
+
+    /* MOBILE NAV LINKS */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(0,0,0,0.9);
+        padding: 20px;
+        border-radius: 10px;
+        gap: 15px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-menu-wrapper {
+        display: flex;
+      }
+
+      /* Stack buttons nicely on small screens */
+      .button-wrapper {
+        max-width: 100%;
+      }
+
+      .button-wrapper a {
+        flex: 1;
       }
     }
   </style>
@@ -134,50 +190,68 @@
 
 <body>
 
-<nav class="sticky-nav">
-  <div class="logo">
-    <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
+  <!-- NAV -->
+  <nav class="sticky-nav">
+    <div class="logo">
+      <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="referral.html">Partners</a></li>
+    </ul>
+  </nav>
+
+  <!-- MOBILE BURGER MENU -->
+  <div class="mobile-menu-wrapper">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="referral.html">Partners</a></li>
-  </ul>
-</nav>
+  <!-- CONTENT -->
+  <div class="content-wrapper">
 
-<div class="content-wrapper">
+    <!-- HERO IMAGE -->
+    <img src="images/IMG_9677.jpeg" class="header-img" alt="Hero Image">
 
-  <img src="images/IMG_9677.jpeg" class="header-img" alt="Hero Image">
+    <section class="section">
+      <h2>Welcome to Peter James Labs</h2>
+      <p>
+        Say goodbye to high upfront costs — get a fast, mobile-friendly, SEO-optimized website that’s fully managed.
+        <br><br>
+        Get your website live in as little as 48 hours.
+      </p>
 
-  <section class="section">
-    <h2>Welcome to Peter James Labs</h2>
-    <p>
-      Say goodbye to high upfront costs — get a fast, mobile-friendly, SEO-optimized website that’s fully managed.
-      <br><br>
-      Get your website live in as little as 48 hours.
-    </p>
+      <!-- BUTTONS -->
+      <div class="button-wrapper">
+        <a href="tel:07521482302" class="btn-small">📱</a>
+        <a href="pricing.html" class="btn-large">📦 Packages</a>
+        <a href="https://wa.me/447521482302" class="btn-small">💬</a>
+      </div>
+    </section>
 
-    <!-- BUTTONS -->
-    <div class="button-wrapper">
-      <!-- CALL -->
-      <a href="tel:07521482302" class="btn-small">📱</a>
+  </div>
 
-      <!-- PACKAGES (CENTER & BIGGER) -->
-      <a href="pricing.html" class="btn-large">📦 Packages</a>
+  <!-- FOOTER -->
+  <footer>
+    Peter James Labs © 2025 — All Rights Reserved
+  </footer>
 
-      <!-- WHATSAPP -->
-      <a href="https://wa.me/447521482302" class="btn-small">💬</a>
-    </div>
-  </section>
+  <!-- JS -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-</div>
-
-<footer>
-  Peter James Labs © 2025 — All Rights Reserved
-</footer>
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
