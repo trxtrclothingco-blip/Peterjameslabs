@@ -102,13 +102,27 @@
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1002;
   }
 
   .hamburger span {
     width: 28px;
     height: 3px;
     background: #ffffff;
+    transition: 0.3s ease;
+  }
+
+  /* Animate to X when active */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 
   /* SECTIONS */
@@ -191,18 +205,18 @@
 
   /* MOBILE */
   @media (max-width: 768px) {
-
     .nav-links {
       display: none;
       flex-direction: column;
       position: absolute;
-      right: 20px;
-      top: 70px;
-      background: rgba(0,0,0,0.95);
+      top: 60px; /* BELOW burger */
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.9);
       padding: 20px;
-      border-radius: 12px;
+      border-radius: 10px;
       gap: 15px;
-      z-index: 1000;
+      width: 80%;
     }
 
     .nav-links.active {
@@ -211,6 +225,8 @@
 
     .mobile-menu-wrapper {
       display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
     }
   }
 </style>
@@ -241,9 +257,7 @@
 
   <div class="mobile-menu-wrapper">
     <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
   </div>
 </div>
@@ -304,18 +318,16 @@
 <script>
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
-  const mobileWrapper = document.querySelector('.mobile-menu-wrapper');
 
   hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
-    mobileWrapper.style.display =
-      navLinks.classList.contains('active') ? 'none' : 'flex';
   });
 
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
       navLinks.classList.remove('active');
-      mobileWrapper.style.display = 'flex';
     });
   });
 </script>
