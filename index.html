@@ -25,7 +25,6 @@
       overflow-x: hidden;
     }
 
-    /* BACKGROUND IMAGE */
     body::before {
       content: '';
       position: fixed;
@@ -50,16 +49,9 @@
       background: rgba(0,0,0,0.55);
       z-index: 1000;
       backdrop-filter: blur(12px);
-      gap: 50px; /* space between links and logo */
     }
 
     .logo {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .logo img {
       max-width: 160px;
     }
 
@@ -68,7 +60,10 @@
       list-style: none;
       display: flex;
       gap: 24px;
-      align-items: center;
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     .nav-links a {
@@ -85,10 +80,16 @@
     }
 
     /* =======================
-       HAMBURGER MENU
+       HAMBURGER MENU (mobile)
     ======================== */
-    .hamburger {
+    .hamburger-wrapper {
       display: none;
+      justify-content: center;
+      margin-top: 70px; /* below navbar */
+    }
+
+    .hamburger {
+      display: flex;
       flex-direction: column;
       gap: 6px;
       cursor: pointer;
@@ -135,9 +136,7 @@
       padding: 40px 20px;
     }
 
-    /* =======================
-       BUTTONS
-    ======================== */
+    /* BUTTONS */
     .button-wrapper {
       display: flex;
       justify-content: center;
@@ -177,9 +176,6 @@
       font-size: 1.2em;
     }
 
-    /* =======================
-       FOOTER
-    ======================== */
     footer {
       text-align: center;
       padding: 20px;
@@ -191,30 +187,26 @@
        RESPONSIVE
     ======================== */
     @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
-
       .nav-links {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
+        display: none;
+        position: relative;
         flex-direction: column;
+        gap: 16px;
+        margin-top: 0;
         background: rgba(0,0,0,0.85);
         padding: 20px;
-        display: none;
-        gap: 16px;
       }
 
       .nav-links.active {
         display: flex;
       }
 
-      .logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+      .hamburger-wrapper {
+        display: flex;
+      }
+
+      .section h2 {
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -222,13 +214,10 @@
 
 <body>
 
+  <!-- NAV -->
   <nav class="sticky-nav">
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <!-- Centered Logo -->
+    <img src="images/IMG_9677.jpeg" class="logo" alt="Peter James Labs Logo">
 
     <!-- Navigation Links -->
     <ul class="nav-links">
@@ -238,12 +227,16 @@
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="referral.html">Partners</a></li>
     </ul>
-
-    <!-- Centered Logo -->
-    <div class="logo">
-      <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
-    </div>
   </nav>
+
+  <!-- Hamburger menu below navbar -->
+  <div class="hamburger-wrapper">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 
   <div class="content-wrapper">
 
