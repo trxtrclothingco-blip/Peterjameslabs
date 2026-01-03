@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <script>
 (function () {
   const PASSWORD = "@PJL2025";
@@ -16,67 +17,212 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Partner / Referral Program – Peter James Labs</title>
+
 <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="/images/IMG_9677.jpeg">
+<link rel="icon" type="image/png" href="images/IMG_9677.jpeg">
 
 <style>
-.referral-section { text-align:center; padding:40px 20px; }
-.referral-header h2 { color:#0b1f3a; font-size:2em; margin-bottom:10px; }
-.referral-header p { font-size:1.1em; margin-bottom:30px; }
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    overflow-x: hidden;
+  }
 
-.referral-block {
-  border:2px solid #0b1f3a;
-  border-radius:18px;
-  padding:25px;
-  margin:20px auto;
-  max-width:700px;
-  text-align:center;
-  background:#ffffff;
-}
+  /* BACKGROUND */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url('IMG_0923.jpeg') no-repeat center center;
+    background-size: cover;
+    filter: brightness(0.35);
+    z-index: -1;
+  }
 
-.referral-block h3 { color:#0b1f3a; margin-bottom:15px; }
+  /* NAV */
+  nav.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
+    background: rgba(0,0,0,0.55);
+    z-index: 1000;
+  }
 
-.referral-block p, .referral-block ul, .referral-block ol {
-  margin:10px 0;
-  line-height:1.6;
-}
+  .logo img {
+    max-width: 160px;
+  }
 
-.referral-block ol { list-style-position:inside; padding-left:0; }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    position: absolute;
+    right: 40px;
+  }
 
-.referral-whatsapp {
-  margin-top:40px;
-  text-align:center;
-}
+  .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+  }
 
-.referral-whatsapp a {
-  display:inline-block;
-  margin-top:15px;
-  padding:16px 26px;
-  background:#25D366;
-  color:#ffffff;
-  font-weight:600;
-  border-radius:30px;
-  text-decoration:none;
-  font-size:1.1em;
-}
+  /* CONTENT */
+  .content-wrapper {
+    padding-top: 140px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
-.footer {
-  text-align:center;
-  padding:20px;
-  background:#0b1f3a;
-  color:#fff;
-  margin-top:40px;
-}
+  .header-img {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* MOBILE BURGER */
+  .mobile-menu-wrapper {
+    display: none;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #ffffff;
+  }
+
+  /* SECTIONS */
+  .referral-section {
+    padding: 40px 20px;
+  }
+
+  .referral-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .referral-header p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #cbd5e1;
+  }
+
+  /* BLUE GLASS BOXES */
+  .referral-block {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 30px;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(16px);
+    border-radius: 22px;
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    box-shadow:
+      0 20px 40px rgba(0,0,0,0.4),
+      0 0 30px rgba(59,130,246,0.15);
+  }
+
+  .referral-block h3 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: #60a5fa;
+  }
+
+  .referral-block p,
+  .referral-block li {
+    line-height: 1.7;
+    color: #e5e7eb;
+  }
+
+  .referral-block ol {
+    list-style-position: inside;
+    padding: 0;
+  }
+
+  /* WHATSAPP */
+  .referral-whatsapp {
+    margin-top: 50px;
+  }
+
+  .referral-whatsapp a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 16px 28px;
+    background: #25D366;
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+  }
+
+  .referral-whatsapp a:hover {
+    transform: scale(1.05);
+    background: #1ebe57;
+  }
+
+  /* FOOTER */
+  footer.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+    margin-top: 50px;
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      right: 20px;
+      top: 70px;
+      background: rgba(0,0,0,0.9);
+      padding: 20px;
+      border-radius: 10px;
+      gap: 15px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .mobile-menu-wrapper {
+      display: flex;
+    }
+  }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav class="sticky-nav">
   <div class="logo">
-    <a href="index.html"><img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo"></a>
+    <a href="index.html">
+      <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
+    </a>
   </div>
-  <div class="hamburger"><span></span><span></span><span></span></div>
+
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Us</a></li>
@@ -86,86 +232,64 @@
   </ul>
 </nav>
 
+<!-- HEADER -->
 <div class="content-wrapper">
   <img src="images/IMG_9677.jpeg" alt="Header Image" class="header-img">
+
+  <div class="mobile-menu-wrapper">
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
 </div>
 
+<!-- CONTENT -->
 <section class="referral-section" id="partners">
-  <div class="container">
 
-    <div class="referral-header">
-      <h2>Partner / Referral Program</h2>
-      <p>Earn recurring commission by connecting businesses with professional websites.</p>
-    </div>
-
-    <div class="referral-content">
-
-      <div class="referral-block">
-        <h3>Who It’s For</h3>
-        <p>Freelancers, marketers, consultants, accountants, or anyone already working with small businesses.</p>
-        <p>You don’t sell, manage clients, or provide support — just make the introduction.</p>
-      </div>
-
-      <div class="referral-block">
-        <h3>Commission Structure (25% Recurring)</h3>
-        <p><strong>£25 package:</strong> £6.25 recurring per month</p>
-        <p><strong>£50 package:</strong> £12.50 recurring per month</p>
-        <p><strong>£75 package:</strong> £18.75 recurring per month</p>
-        <p><strong>£100 package:</strong> £25 recurring per month</p>
-        <p>No targets. No contracts. No limits.</p>
-      </div>
-
-      <div class="referral-block">
-        <h3>Example Monthly Earnings</h3>
-
-        <p><strong>£25 package</strong><br>
-          1 referral → £6.25 / month<br>
-          5 referrals → £31.25 / month<br>
-          10 referrals → £62.50 / month<br>
-          25 referrals → £156.25 / month
-        </p>
-
-        <p><strong>£50 package</strong><br>
-          1 referral → £12.50 / month<br>
-          5 referrals → £62.50 / month<br>
-          10 referrals → £125 / month<br>
-          25 referrals → £312.50 / month
-        </p>
-
-        <p><strong>£75 package</strong><br>
-          1 referral → £18.75 / month<br>
-          5 referrals → £93.75 / month<br>
-          10 referrals → £187.50 / month<br>
-          25 referrals → £468.75 / month
-        </p>
-
-        <p><strong>£100 package</strong><br>
-          1 referral → £25 / month<br>
-          5 referrals → £125 / month<br>
-          10 referrals → £250 / month<br>
-          25 referrals → £625 / month
-        </p>
-      </div>
-
-      <div class="referral-block">
-        <h3>How It Works</h3>
-        <ol>
-          <li>You refer a business</li>
-          <li>We build and manage the website</li>
-          <li>You get paid every month they stay an active client.</li>
-        </ol>
-      </div>
-
-    </div>
-
-    <div class="referral-whatsapp">
-      <p><strong>Prefer WhatsApp?</strong><br>Message us directly to become a referral partner.</p>
-      <a href="https://wa.me/447521482302?text=Hi%20Peter%2C%20I%E2%80%99m%20interested%20in%20your%20Partner%20Referral%20Program." target="_blank" rel="noopener noreferrer">
-        Chat on WhatsApp
-      </a>
-    </div>
-
+  <div class="referral-header">
+    <h2>Partner / Referral Program</h2>
+    <p>Earn recurring commission by connecting businesses with professional websites.</p>
   </div>
+
+  <div class="referral-block">
+    <h3>Who It’s For</h3>
+    <p>Freelancers, marketers, consultants, accountants, or anyone already working with small businesses.</p>
+    <p>You don’t sell, manage clients, or provide support — just make the introduction.</p>
+  </div>
+
+  <div class="referral-block">
+    <h3>Commission Structure (25% Recurring)</h3>
+    <p>£25 package → £6.25 / month</p>
+    <p>£50 package → £12.50 / month</p>
+    <p>£75 package → £18.75 / month</p>
+    <p>£100 package → £25 / month</p>
+    <p>No targets. No contracts. No limits.</p>
+  </div>
+
+  <div class="referral-block">
+    <h3>Example Monthly Earnings</h3>
+    <p><strong>£25 package:</strong> Up to £156.25 / month</p>
+    <p><strong>£50 package:</strong> Up to £312.50 / month</p>
+    <p><strong>£75 package:</strong> Up to £468.75 / month</p>
+    <p><strong>£100 package:</strong> Up to £625 / month</p>
+  </div>
+
+  <div class="referral-block">
+    <h3>How It Works</h3>
+    <ol>
+      <li>You refer a business</li>
+      <li>We build & manage the website</li>
+      <li>You get paid every month they stay active</li>
+    </ol>
+  </div>
+
+  <div class="referral-whatsapp">
+    <p><strong>Prefer WhatsApp?</strong></p>
+    <a href="https://wa.me/447521482302?text=Hi%20Peter%2C%20I%E2%80%99m%20interested%20in%20your%20Partner%20Referral%20Program." target="_blank">
+      Chat on WhatsApp
+    </a>
+  </div>
+
 </section>
 
 <footer class="footer">
@@ -173,18 +297,18 @@
 </footer>
 
 <script>
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
   });
-});
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
 </script>
 
 </body>
