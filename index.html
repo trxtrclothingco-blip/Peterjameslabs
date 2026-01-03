@@ -4,29 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peter James Labs – Home</title>
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
-  <!-- Favicon with fallback if file missing -->
-  <link rel="icon" type="image/jpeg" href="IMG_9677.jpeg">
+  <link rel="icon" type="image/png" href="IMG_9677.jpeg">
 
   <style>
-    /* Full-page background: covers screen perfectly, no distortion */
+    /* ===== Full-screen background (NO distortion) ===== */
     body {
-      background: url('IMG_0923.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      position: relative;
-      min-height: 100vh;
       margin: 0;
-      padding: 0;
+      min-height: 100vh;
+      background-image: url('IMG_0923.jpeg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover; /* 🔥 KEY FIX */
+      background-attachment: fixed;
+      position: relative;
+      overflow-x: hidden;
     }
 
-    /* Dark overlay for strong text contrast */
+    /* ===== Dark overlay (sits ABOVE bg, BELOW content) ===== */
     body::before {
       content: '';
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(10, 15, 30, 0.78);
+      inset: 0;
+      background: rgba(10, 15, 30, 0.75);
       backdrop-filter: blur(3px);
-      z-index: -1;
+      z-index: 0;
+    }
+
+    /* ===== Ensure all site content is above overlay ===== */
+    nav,
+    .content-wrapper,
+    footer {
+      position: relative;
+      z-index: 1;
     }
 
     .section {
@@ -63,11 +75,7 @@
 
   <nav class="sticky-nav">
     <div class="logo">
-      <!-- Logo image with fallback if not found -->
-      <img src="IMG_9677.jpeg" 
-           alt="Peter James Labs Logo" 
-           loading="lazy"
-           onerror="this.style.display='none'; console.log('Logo image not found')">
+      <img src="IMG_9677.jpeg" alt="Peter James Labs Logo">
     </div>
 
     <div class="hamburger">
@@ -84,16 +92,13 @@
   </nav>
 
   <div class="content-wrapper">
-    <!-- Top header image with fallback -->
-    <img src="IMG_9677.jpeg" 
-         alt="Top Image" 
-         class="header-img" 
-         loading="lazy"
-         onerror="this.style.display='none'; console.log('Header image not found')">
+    <!-- Image loads correctly over background -->
+    <img src="IMG_9677.jpeg" alt="Top Image" class="header-img">
 
     <section class="section">
       <h2>Welcome to Peter James Labs</h2>
       <p>Professional websites, get started in 15–30 minutes. Fully managed, mobile and SEO optimised.</p>
+
       <p>
         At Peter James Labs, we eliminate the high costs traditionally associated with website building.
         Our websites are affordable, fully managed, and come with <strong>no contracts</strong>.
@@ -110,12 +115,10 @@
   </footer>
 
   <script>
-    /* Burger toggle */
     document.querySelector('.hamburger').addEventListener('click', () => {
       document.querySelector('.nav-links').classList.toggle('active');
     });
 
-    /* Close menu after click */
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         document.querySelector('.nav-links').classList.remove('active');
