@@ -9,18 +9,17 @@
   <link rel="icon" type="image/png" href="images/IMG_9677.jpeg">
 
   <style>
-    /* BASIC RESET */
+    /* RESET */
     body {
       margin: 0;
       padding: 0;
       min-height: 100vh;
       font-family: 'Inter', sans-serif;
       color: #ffffff;
-      position: relative;
       overflow-x: hidden;
     }
 
-    /* BACKGROUND IMAGE */
+    /* FULL BACKGROUND */
     body::before {
       content: '';
       position: fixed;
@@ -31,44 +30,48 @@
       z-index: -1;
     }
 
-    /* NAV */
+    /* NAV BAR */
     nav.sticky-nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center; /* CENTER LOGO */
       align-items: center;
-      padding: 18px 40px;
-      background: rgba(0, 0, 0, 0.5);
+      padding: 18px 20px;
+      background: rgba(0, 0, 0, 0.55);
       z-index: 1000;
     }
 
     .logo img {
-      max-width: 150px;
+      max-width: 160px;
       height: auto;
     }
 
+    /* DESKTOP NAV LINKS */
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 24px;
+      position: absolute;
+      right: 40px;
     }
 
     .nav-links li a {
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
       font-weight: 600;
     }
 
-    /* CONTENT */
+    /* CONTENT WRAPPER */
     .content-wrapper {
       padding-top: 140px;
       max-width: 1200px;
       margin: 0 auto;
       padding-left: 20px;
       padding-right: 20px;
+      text-align: center;
     }
 
     /* TOP IMAGE */
@@ -77,8 +80,6 @@
       margin: 0 auto 30px auto;
       max-width: 100%;
       height: auto;
-      position: relative;
-      z-index: 1;
     }
 
     /* MOBILE BURGER UNDER IMAGE */
@@ -103,7 +104,6 @@
 
     /* SECTION */
     .section {
-      text-align: center;
       padding: 40px 20px;
     }
 
@@ -138,9 +138,9 @@
         display: none;
         flex-direction: column;
         position: absolute;
-        right: 30px;
+        right: 20px;
         top: 70px;
-        background: rgba(0,0,0,0.85);
+        background: rgba(0,0,0,0.9);
         padding: 20px;
         border-radius: 10px;
         gap: 15px;
@@ -159,7 +159,7 @@
 
 <body>
 
-  <!-- NAV BAR -->
+  <!-- NAV -->
   <nav class="sticky-nav">
     <div class="logo">
       <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
@@ -177,10 +177,10 @@
   <!-- CONTENT -->
   <div class="content-wrapper">
 
-    <!-- TOP IMAGE -->
+    <!-- HERO IMAGE (CENTRED) -->
     <img src="images/IMG_9677.jpeg" alt="Top Image" class="header-img">
 
-    <!-- CENTERED MOBILE BURGER -->
+    <!-- MOBILE BURGER -->
     <div class="mobile-menu-wrapper">
       <div class="hamburger">
         <span></span>
