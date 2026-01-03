@@ -8,21 +8,21 @@
   <link rel="icon" type="image/png" href="IMG_9677.jpeg">
 
   <style>
-    /* Full-page background image - file in same folder as index.html */
+    /* Full-page background - same folder, less zoomed in */
     body {
       background: url('IMG_0923.jpeg') no-repeat center center fixed;
-      background-size: cover;
+      background-size: 120%; /* Adjust this: 100% = exact fit, 120% = slightly larger, 150% = more zoomed */
       position: relative;
       min-height: 100vh;
     }
 
-    /* Dark semi-transparent overlay for excellent text readability */
+    /* Dark overlay for text readability */
     body::before {
       content: '';
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(15, 23, 42, 0.70); /* Adjust opacity if needed (0.6–0.8 works well) */
-      backdrop-filter: blur(3px); /* Subtle futuristic blur */
+      background: rgba(10, 15, 30, 0.75); /* Stronger overlay for contrast */
+      backdrop-filter: blur(3px);
       z-index: -1;
     }
 
