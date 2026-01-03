@@ -17,6 +17,7 @@
       font-family: 'Inter', sans-serif;
       color: #ffffff;
       overflow-x: hidden;
+      text-align: center; /* CENTER ALL TEXT */
     }
 
     /* FULL BACKGROUND */
@@ -34,9 +35,10 @@
     nav.sticky-nav {
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
       display: flex;
-      justify-content: center; /* center logo */
+      justify-content: center;
       align-items: center;
       padding: 18px 20px;
       background: rgba(0,0,0,0.55);
@@ -48,7 +50,7 @@
       height: auto;
     }
 
-    /* NAV LINKS (DESKTOP) */
+    /* DESKTOP NAV LINKS */
     .nav-links {
       list-style: none;
       display: flex;
@@ -57,8 +59,8 @@
       right: 40px;
     }
 
-    .nav-links a {
-      color: #fff;
+    .nav-links li a {
+      color: #ffffff;
       text-decoration: none;
       font-weight: 600;
     }
@@ -67,16 +69,38 @@
     .content-wrapper {
       padding-top: 140px;
       max-width: 1200px;
-      margin: auto;
-      text-align: center;
+      margin: 0 auto;
       padding-left: 20px;
       padding-right: 20px;
     }
 
     /* HERO IMAGE */
     .header-img {
+      display: block;
+      margin: 0 auto 30px auto;
       max-width: 100%;
+      height: auto;
+    }
+
+    /* MOBILE BURGER UNDER IMAGE */
+    .mobile-menu-wrapper {
+      display: none;
+      justify-content: center;
       margin-bottom: 30px;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 3px;
     }
 
     /* SECTION */
@@ -84,7 +108,7 @@
       padding: 40px 20px;
     }
 
-    /* BUTTON ROW */
+    /* BUTTONS */
     .button-wrapper {
       display: flex;
       justify-content: center;
@@ -112,7 +136,6 @@
       transform: scale(1.05);
     }
 
-    /* SIZE RULES */
     .btn-small {
       flex: 1;
       height: 54px;
@@ -133,35 +156,14 @@
       margin-top: 40px;
     }
 
-    /* MOBILE BURGER MENU */
-    .mobile-menu-wrapper {
-      display: none;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      cursor: pointer;
-    }
-
-    .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: #ffffff;
-      border-radius: 3px;
-    }
-
-    /* MOBILE NAV LINKS */
+    /* MOBILE RULES */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px;
         right: 20px;
+        top: 70px;
         background: rgba(0,0,0,0.9);
         padding: 20px;
         border-radius: 10px;
@@ -173,7 +175,7 @@
       }
 
       .mobile-menu-wrapper {
-        display: flex;
+        display: flex; /* show burger below hero image */
       }
 
       /* Stack buttons nicely on small screens */
@@ -200,25 +202,23 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="pricing.html">📦 Packages</a></li>
       <li><a href="referral.html">Partners</a></li>
     </ul>
   </nav>
 
-  <!-- MOBILE BURGER MENU -->
-  <div class="mobile-menu-wrapper">
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
-  <!-- CONTENT -->
+  <!-- HERO IMAGE -->
   <div class="content-wrapper">
-
-    <!-- HERO IMAGE -->
     <img src="images/IMG_9677.jpeg" class="header-img" alt="Hero Image">
+
+    <!-- MOBILE BURGER -->
+    <div class="mobile-menu-wrapper">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
 
     <section class="section">
       <h2>Welcome to Peter James Labs</h2>
@@ -235,7 +235,6 @@
         <a href="https://wa.me/447521482302" class="btn-small">💬</a>
       </div>
     </section>
-
   </div>
 
   <!-- FOOTER -->
@@ -245,11 +244,8 @@
 
   <!-- JS -->
   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
     });
   </script>
 
