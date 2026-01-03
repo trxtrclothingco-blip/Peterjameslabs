@@ -44,22 +44,31 @@
       top: 0;
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 18px 20px;
       background: rgba(0,0,0,0.55);
       z-index: 1000;
       backdrop-filter: blur(12px);
+      gap: 50px; /* space between links and logo */
+    }
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .logo img {
       max-width: 160px;
     }
 
+    /* NAV LINKS */
     .nav-links {
       list-style: none;
       display: flex;
       gap: 24px;
+      align-items: center;
     }
 
     .nav-links a {
@@ -201,6 +210,12 @@
       .nav-links.active {
         display: flex;
       }
+
+      .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   </style>
 </head>
@@ -208,10 +223,6 @@
 <body>
 
   <nav class="sticky-nav">
-    <div class="logo">
-      <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
-    </div>
-
     <!-- Hamburger -->
     <div class="hamburger" id="hamburger">
       <span></span>
@@ -227,6 +238,11 @@
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="referral.html">Partners</a></li>
     </ul>
+
+    <!-- Centered Logo -->
+    <div class="logo">
+      <img src="images/IMG_9677.jpeg" alt="Peter James Labs Logo">
+    </div>
   </nav>
 
   <div class="content-wrapper">
