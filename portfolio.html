@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View examples of websites built by Peter James Labs.">
+  <title>Peter James Labs – Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="IMG_0936.jpeg">
+
+  <style>
+    /* Portfolio grid spacing */
+    .portfolio-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Individual project cards */
+    .project {
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      border-radius: 12px;
+      padding: 20px;
+      width: 260px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Image sizing — SAME for all cards */
+    .project img {
+      width: 200px;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .project h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .project p {
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+    }
+
+    .project .buy-btn {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+
+    /* Button above portfolio section */
+    .view-packages-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      background-color: #FFD700;
+      color: #000;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .view-packages-btn:hover {
+      background-color: #FFC107;
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+  <nav class="sticky-nav">
+    <div class="logo">
+      <img src="IMG_0936.jpeg" alt="Peter James Labs Logo" loading="lazy">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="referral.html">Partners</a></li>
+    </ul>
+    <div class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <label for="themeSwitch">Light Mode: <input type="checkbox" id="themeSwitch"></label>
+  </nav>
+
+  <main class="content-wrapper">
+    <img src="IMG_0936.jpeg" class="header-img" alt="Portfolio Hero Image" loading="lazy">
+
+    <section class="section">
+      <h2>Our Portfolio</h2>
+
+      <a href="pricing.html" class="view-packages-btn">View Packages</a>
+
+      <div class="portfolio-grid">
+        <!-- CrepCode -->
+        <div class="project">
+          <img src="IMG_1272.jpeg" alt="CrepCode Website" loading="lazy">
+          <h3>CrepCode</h3>
+          <p>Crep Code — the UK’s Number 1 trainer trader. Trusted by over 5,000 sneakerheads.</p>
+          <a href="https://crepcode.com" class="buy-btn" target="_blank" rel="noopener noreferrer">View Live</a>
+        </div>
+
+        <!-- Plumber Example -->
+        <div class="project">
+          <img src="IMG_1279.jpeg" alt="Plumber Website Example" loading="lazy">
+          <h3>Plumber Example</h3>
+          <p>SEO-optimized page for service providers.</p>
+          <a href="https://trxtrclothingco-blip.github.io/Plumber-Example-/" class="buy-btn" target="_blank" rel="noopener noreferrer">View Live</a>
+        </div>
+
+        <!-- Gas Engineer Example -->
+        <div class="project">
+          <img src="IMG_1288.jpeg" alt="Gas Engineer Website Example" loading="lazy">
+          <h3>Gas Engineer Example</h3>
+          <p>Modern, conversion-focused website for gas & heating engineers.</p>
+          <a href="https://trxtrclothingco-blip.github.io/Example-Gas-Engineer/" class="buy-btn" target="_blank" rel="noopener noreferrer">View Live</a>
+        </div>
+
+        <!-- Electrician Example (NEW 4th CARD) -->
+        <div class="project">
+          <img src="IMG_1295.jpeg" alt="Electrician Website Example" loading="lazy">
+          <h3>Electrician Example</h3>
+          <p>Clean, professional website designed for local electricians.</p>
+          <a href="https://trxtrclothingco-blip.github.io/Example-Electrician/" class="buy-btn" target="_blank" rel="noopener noreferrer">View Live</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Peter James Labs © 2026 — All Rights Reserved</p>
+    <div class="social-links">
+      <a href="https://twitter.com">Twitter</a>
+      <a href="https://linkedin.com">LinkedIn</a>
+      <a href="https://instagram.com">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
