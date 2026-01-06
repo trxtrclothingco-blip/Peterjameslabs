@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join Peter James Labs' partner referral program and earn recurring commissions.">
+  <title>Peter James Labs – Partners</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="IMG_0936.jpeg">
+
+  <style>
+    /* Password overlay styles - frosted glass, adapts to light/dark mode */
+    #password-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+      border-radius: 0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(30px) brightness(0.7);
+      -webkit-backdrop-filter: blur(30px) brightness(0.7);
+      background: rgba(0, 31, 91, 0.6); /* default dark mode */
+      transition: opacity 0.3s ease, visibility 0.3s ease, background 0.3s, backdrop-filter 0.3s;
+    }
+
+    body[data-theme="light"] #password-overlay {
+      background: rgba(255, 255, 255, 0.6);
+      color: #001F5B;
+      backdrop-filter: blur(30px) brightness(1.2);
+      -webkit-backdrop-filter: blur(30px) brightness(1.2);
+      border: 1px solid rgba(0, 31, 91, 0.2);
+    }
+
+    #password-overlay h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #FFD700; /* Gold accent */
+    }
+
+    body[data-theme="light"] #password-overlay h2 {
+      color: #001F5B;
+    }
+
+    #password-overlay input {
+      padding: 12px 15px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      width: 250px;
+    }
+
+    #password-overlay button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      background: #FFD700;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin: 5px;
+    }
+
+    #password-overlay button:hover {
+      background: #FFC107;
+    }
+
+    #password-overlay p {
+      margin-top: 10px;
+      color: #FF6B6B; /* Error message color */
+      display: none;
+    }
+
+    /* Home button inline with Enter button */
+    #password-overlay .home-btn {
+      background: #fff;
+      color: #001F5B;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 5px;
+      margin: 5px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    #password-overlay .home-btn:hover {
+      background: #FFD700;
+      color: #000;
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <!-- PASSWORD OVERLAY -->
+  <div id="password-overlay">
+    <h2>Enter Password to Access</h2>
+    <input type="password" id="page-password" placeholder="Password">
+    <div>
+      <button onclick="checkPassword()">Enter</button>
+      <a href="index.html" class="home-btn">Home</a>
+    </div>
+    <p id="error-msg">Incorrect password. Try again.</p>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <nav class="sticky-nav">
+    <div class="logo">
+      <img src="IMG_0936.jpeg" alt="Peter James Labs Logo" loading="lazy">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="referral.html">Partners</a></li>
+    </ul>
+    <div class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <label for="themeSwitch">Light Mode: <input type="checkbox" id="themeSwitch"></label>
+  </nav>
+
+  <main class="content-wrapper">
+    <img src="IMG_0936.jpeg" class="header-img" alt="Partners Hero Image" loading="lazy">
+    <section class="section">
+      <h2>Partner / Referral Program</h2>
+      <p>Earn recurring commission by connecting businesses with professional websites.</p>
+      <h3>Who It’s For</h3>
+      <p>Freelancers, marketers, consultants, accountants, or anyone working with small businesses. Just make introductions—we handle the rest.</p>
+      <h3>Commission Structure (25% Recurring)</h3>
+      <ul>
+        <li>£25 package → £6.25 / month</li>
+        <li>£50 package → £12.50 / month</li>
+        <li>£75 package → £18.75 / month</li>
+        <li>£100 package → £25 / month</li>
+      </ul>
+      <h3>Example Monthly Earnings</h3>
+      <ul>
+        <li>£25 package: Up to £156.25 / month</li>
+      </ul>
+      <h3>How It Works</h3>
+      <ol>
+        <li>You refer a business</li>
+        <li>We build & manage the website</li>
+        <li>You get paid every month they stay active</li>
+      </ol>
+      <a href="https://wa.me/447521482302?text=Hi%20Peter%2C%20I%E2%80%99m%20interested%20in%20your%20Partner%20Referral%20Program." class="whatsapp-btn">Chat on WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Peter James Labs © 2026 — All Rights Reserved</p>
+    <div class="social-links">
+      <a href="https://twitter.com" aria-label="Twitter">Twitter</a>
+      <a href="https://linkedin.com" aria-label="LinkedIn">LinkedIn</a>
+      <a href="https://instagram.com" aria-label="Instagram">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('page-password').value;
+      const overlay = document.getElementById('password-overlay');
+      const errorMsg = document.getElementById('error-msg');
+
+      if(input === '@PJL2025') {
+        // Smooth fade-out
+        overlay.style.opacity = '0';
+        overlay.style.visibility = 'hidden';
+      } else {
+        errorMsg.style.display = 'block';
+      }
+    }
+
+    // Optional: press Enter to submit password
+    document.getElementById('page-password').addEventListener('keypress', function(e) {
+      if(e.key === 'Enter') checkPassword();
+    });
+  </script>
+</body>
+</html>
